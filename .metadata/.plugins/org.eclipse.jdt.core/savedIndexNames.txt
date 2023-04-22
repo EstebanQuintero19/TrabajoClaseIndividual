@@ -1,0 +1,9 @@
+INDEX VERSION 1.132+E:\PersonalData\DOO\PubliUco\.metadata\.plugins\org.eclipse.jdt.core
+2198332665.index
+464124576.index
+3437752194.index
+1569335442.index
+1865860411.index
+1865797976.index
+3677941284.index
+1203874273.index
