@@ -1,4 +1,4 @@
-package co.edu.uco.publiuco.bussiness.assembler;
+package co.edu.uco.publiuco.business.assembler;
 
 public interface Assembler <D, T, E> {
 	

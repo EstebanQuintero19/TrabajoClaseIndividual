@@ -1,4 +1,4 @@
-package co.edu.uco.publiuco.data.dao.sqlserver;
+package co.edu.uco.publiuco.data.dao.relational.sqlserver;
 
 import java.sql.Connection;
 import java.util.List;

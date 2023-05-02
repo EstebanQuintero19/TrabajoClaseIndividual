@@ -1,6 +1,6 @@
-package co.edu.uco.publiuco.bussiness.assembler.concrete;
+package co.edu.uco.publiuco.business.assembler.concrete;
 
-import co.edu.uco.publiuco.business.assembler.*;
+import co.edu.uco.publiuco.business.assembler.Assembler;
 import co.edu.uco.publiuco.bussiness.domain.EstadoAdministradorCategoriaDomain;
 import co.edu.uco.publiuco.dto.EstadoAdministradorCategoriaDTO;
 import co.edu.uco.publiuco.entities.EstadoAdministradorCategoriaEntity;

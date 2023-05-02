@@ -8,7 +8,7 @@ public interface EstadoTipoRelacionInstitucionDAO {
 	
 	void create(EstadoTipoRelacionInstitucionEntity entity);
 	
-	List<EstadoTipoRelacionInstitucionEntity> read(EstadoTipoRelacionInstitucionEntity entity)
+	List<EstadoTipoRelacionInstitucionEntity> read(EstadoTipoRelacionInstitucionEntity entity);
 	
 	void update(EstadoTipoRelacionInstitucionEntity entity);
 	

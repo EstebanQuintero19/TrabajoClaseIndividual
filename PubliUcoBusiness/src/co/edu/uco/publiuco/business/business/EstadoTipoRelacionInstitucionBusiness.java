@@ -1,10 +1,10 @@
-package co.edu.uco.publiuco.business.bussiness;
+package co.edu.uco.publiuco.business.business;
 
 import java.util.List;
 
 import co.edu.uco.publiuco.bussiness.domain.EstadoTipoRelacionInstitucionDomain;
 
-public interface  EstadoTipoRelacionInstitucionBussiness {
+public interface  EstadoTipoRelacionInstitucionBusiness {
 	
 	void registrer(EstadoTipoRelacionInstitucionDomain domain);
 	

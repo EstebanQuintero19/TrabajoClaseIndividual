@@ -1,6 +1,6 @@
 package co.edu.uco.publiuco.business.assembler.concrete;
 
-import co.edu.uco.publiuco.bussiness.assembler.Assembler;
+import co.edu.uco.publiuco.business.assembler.Assembler;
 import co.edu.uco.publiuco.bussiness.domain.EstadoComentarioLectorDomain;
 import co.edu.uco.publiuco.dto.EstadoComentarioLectorDTO;
 import co.edu.uco.publiuco.entities.EstadoComentarioLectorEntity;
