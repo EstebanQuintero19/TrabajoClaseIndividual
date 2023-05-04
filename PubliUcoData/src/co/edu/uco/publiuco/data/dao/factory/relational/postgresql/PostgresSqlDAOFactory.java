@@ -1,4 +1,4 @@
-package co.edu.uco.publiuco.data.dao.factory.relational.sqlserver;
+package co.edu.uco.publiuco.data.dao.factory.relational.postgresql;
 
 import java.sql.Connection;
 
@@ -104,51 +104,47 @@ import co.edu.uco.publiuco.data.dao.relational.sqlserver.TipoReporteSqlServerDAO
 import co.edu.uco.publiuco.data.dao.relational.sqlserver.TipoRevisionSqlServerDAO;
 import co.edu.uco.publiuco.data.dao.relational.sqlserver.VersionSqlServerDAO;
 
-public final class SqlServerDAOFactory extends DAOFactory{
-	
+public final class PostgresSqlDAOFactory extends DAOFactory {
+
 	private Connection connection;
-	
-	public SqlServerDAOFactory() {
+
+	public PostgresSqlDAOFactory() {
 		abrirConexion();
 	}
 
 	@Override
-	protected final void abrirConexion() {
+	protected void abrirConexion() {
 		
+
 	}
 
 	@Override
-	public final void cerrarConexion() {
+	public void cerrarConexion() {
 		
-		
+
 	}
 
 	@Override
-	public final void iniciarTransaccion() {
+	public void iniciarTransaccion() {
 		
-		
+
 	}
 
 	@Override
-	public final void confirmarTransaccion() {
+	public void confirmarTransaccion() {
 		
-		
+
 	}
 
 	@Override
-	public final void cancelarTransaccion() {
+	public void cancelarTransaccion() {
 		
-		
+
 	}
 
 	@Override
 	public EstadoTipoRelacionInstitucionDAO getEstadoTipoRelacionInstitucionDAO() {
 		return new EstadoTipoRelacionInstitucionSqlServerDAO(connection);
-	}
-
-	@Override
-	public TipoRelacionInstitucionDAO getTipoRelacionInstitucionDAO() {
-		return new TipoRelacionInstitucionSqlServerDAO(connection);
 	}
 
 	@Override
@@ -264,6 +260,11 @@ public final class SqlServerDAOFactory extends DAOFactory{
 	@Override
 	public TipoIdentificacionDAO getTipoIdentificacionDAO() {
 		return new TipoIdentificacionSqlServerDAO(connection);
+	}
+
+	@Override
+	public TipoRelacionInstitucionDAO getTipoRelacionInstitucionDAO() {
+		return new TipoRelacionInstitucionSqlServerDAO(connection);
 	}
 
 	@Override
