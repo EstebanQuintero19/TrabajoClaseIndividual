@@ -1,4 +1,4 @@
-package co.edu.uco.publiuco.bussiness.domain;
+package co.edu.uco.publiuco.business.domain;
 
 import java.util.UUID;
 

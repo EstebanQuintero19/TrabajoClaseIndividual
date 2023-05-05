@@ -1,10 +1,10 @@
-package co.edu.uco.publiuco.business.bussiness.impl;
+package co.edu.uco.publiuco.business.business.impl;
 
 import java.util.List;
 
 import co.edu.uco.publiuco.business.assembler.concrete.EstadoTipoRelacionInstitucionAssembler;
 import co.edu.uco.publiuco.business.business.EstadoTipoRelacionInstitucionBusiness;
-import co.edu.uco.publiuco.bussiness.domain.EstadoTipoRelacionInstitucionDomain;
+import co.edu.uco.publiuco.business.domain.EstadoTipoRelacionInstitucionDomain;
 import co.edu.uco.publiuco.data.dao.factory.DAOFactory;
 import co.edu.uco.publiuco.entities.EstadoTipoRelacionInstitucionEntity;
 

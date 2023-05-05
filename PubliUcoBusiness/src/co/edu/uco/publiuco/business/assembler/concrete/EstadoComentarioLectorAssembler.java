@@ -1,7 +1,7 @@
 package co.edu.uco.publiuco.business.assembler.concrete;
 
 import co.edu.uco.publiuco.business.assembler.Assembler;
-import co.edu.uco.publiuco.bussiness.domain.EstadoComentarioLectorDomain;
+import co.edu.uco.publiuco.business.domain.EstadoComentarioLectorDomain;
 import co.edu.uco.publiuco.dto.EstadoComentarioLectorDTO;
 import co.edu.uco.publiuco.entities.EstadoComentarioLectorEntity;
 
@@ -19,23 +19,23 @@ public class EstadoComentarioLectorAssembler
 	}
 
 	@Override
-	public EstadoComentarioLectorDTO toDTOFromDomain(EstadoComentarioLectorDomain domian) {
+	public EstadoComentarioLectorDTO toDTOFromDomain(final EstadoComentarioLectorDomain domian) {
 		return EstadoComentarioLectorDTO.create().setIdentificador(domian.getIdentificador())
 				.setNombre(domian.getNombre()).setDescripcion(domian.getDescripcion());
 	}
 
 	@Override
-	public EstadoComentarioLectorDomain toDomainFromDto(EstadoComentarioLectorDTO dto) {
+	public EstadoComentarioLectorDomain toDomainFromDto(final EstadoComentarioLectorDTO dto) {
 		return new EstadoComentarioLectorDomain(dto.getIdentificador(), dto.getNombre(), dto.getDescripcion());
 	}
 
 	@Override
-	public EstadoComentarioLectorEntity toEntityFromDomain(EstadoComentarioLectorDomain domain) {
+	public EstadoComentarioLectorEntity toEntityFromDomain(final EstadoComentarioLectorDomain domain) {
 		return new EstadoComentarioLectorEntity(domain.getIdentificador(), domain.getNombre(), domain.getDescripcion());
 	}
 
 	@Override
-	public EstadoComentarioLectorDomain toDomainFromEntity(EstadoComentarioLectorEntity entity) {
+	public EstadoComentarioLectorDomain toDomainFromEntity(final EstadoComentarioLectorEntity entity) {
 		return new EstadoComentarioLectorDomain(entity.getIdentificador(), entity.getNombre(), entity.getDescripcion());
 	}
 

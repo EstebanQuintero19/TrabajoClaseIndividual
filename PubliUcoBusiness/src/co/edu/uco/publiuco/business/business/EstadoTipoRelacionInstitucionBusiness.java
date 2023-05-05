@@ -2,15 +2,12 @@ package co.edu.uco.publiuco.business.business;
 
 import java.util.List;
 
-import co.edu.uco.publiuco.bussiness.domain.EstadoTipoRelacionInstitucionDomain;
+import co.edu.uco.publiuco.business.domain.EstadoTipoRelacionInstitucionDomain;
 
-public interface  EstadoTipoRelacionInstitucionBusiness {
+public interface EstadoTipoRelacionInstitucionBusiness {
 	
-	void registrer(EstadoTipoRelacionInstitucionDomain domain);
+	void register(EstadoTipoRelacionInstitucionDomain domain);
 	
 	List<EstadoTipoRelacionInstitucionDomain> list(EstadoTipoRelacionInstitucionDomain domain);
 
-	void modify (EstadoTipoRelacionInstitucionDomain domain);
-	
-	void drop(EstadoTipoRelacionInstitucionDomain domain);
 }

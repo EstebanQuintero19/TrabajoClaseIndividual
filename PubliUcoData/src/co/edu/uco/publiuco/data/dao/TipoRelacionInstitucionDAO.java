@@ -13,5 +13,4 @@ public interface TipoRelacionInstitucionDAO {
 	void update(TipoRelacionInstitucionEntity entity);
 
 	void delete(TipoRelacionInstitucionEntity entity);
-	
 }

@@ -6,7 +6,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class RevisorEntity {
+public final class RevisorEntity {
 	
 	private static final RevisorEntity DEFAULT_OBJECT = new RevisorEntity();
 	private UUID identificador;

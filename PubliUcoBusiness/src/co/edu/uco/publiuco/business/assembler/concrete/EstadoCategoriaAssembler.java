@@ -1,7 +1,7 @@
 package co.edu.uco.publiuco.business.assembler.concrete;
 
 import co.edu.uco.publiuco.business.assembler.Assembler;
-import co.edu.uco.publiuco.bussiness.domain.EstadoCategoriaDomain;
+import co.edu.uco.publiuco.business.domain.EstadoCategoriaDomain;
 import co.edu.uco.publiuco.dto.EstadoCategoriaDTO;
 import co.edu.uco.publiuco.entities.EstadoCategoriaEntity;
 
@@ -19,23 +19,23 @@ public class EstadoCategoriaAssembler
 	}
 
 	@Override
-	public EstadoCategoriaDTO toDTOFromDomain(EstadoCategoriaDomain domian) {
+	public EstadoCategoriaDTO toDTOFromDomain(final EstadoCategoriaDomain domian) {
 		return EstadoCategoriaDTO.create().setIdentificador(domian.getIdentificador()).setNombre(domian.getNombre())
 				.setDescripcion(domian.getNombre());
 	}
 
 	@Override
-	public EstadoCategoriaDomain toDomainFromDto(EstadoCategoriaDTO dto) {
+	public EstadoCategoriaDomain toDomainFromDto(final EstadoCategoriaDTO dto) {
 		return new EstadoCategoriaDomain(dto.getIdentificador(), dto.getNombre(), dto.getDescripcion());
 	}
 
 	@Override
-	public EstadoCategoriaEntity toEntityFromDomain(EstadoCategoriaDomain domain) {
+	public EstadoCategoriaEntity toEntityFromDomain(final EstadoCategoriaDomain domain) {
 		return new EstadoCategoriaEntity(domain.getIdentificador(), domain.getNombre(), domain.getDescripcion());
 	}
 
 	@Override
-	public EstadoCategoriaDomain toDomainFromEntity(EstadoCategoriaEntity entity) {
+	public EstadoCategoriaDomain toDomainFromEntity(final EstadoCategoriaEntity entity) {
 		return new EstadoCategoriaDomain(entity.getIdentificador(), entity.getNombre(), entity.getDescripcion());
 	}
 
