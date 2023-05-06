@@ -1,3 +1,4 @@
+package co.edu.uco.publiuco.dto;
 import java.util.UUID;
 
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
