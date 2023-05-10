@@ -12,7 +12,7 @@ public final class EstadoTipoRelacionInstitucionBusinessImpl implements EstadoTi
 
 	private DAOFactory daoFactory;
 
-	public EstadoTipoRelacionInstitucionBusinessImpl(final DAOFactory daoFactoy, DAOFactory daoFactory) {
+	public EstadoTipoRelacionInstitucionBusinessImpl(final DAOFactory daoFactory) {
 		this.daoFactory = daoFactory;
 	}
 
@@ -25,10 +25,13 @@ public final class EstadoTipoRelacionInstitucionBusinessImpl implements EstadoTi
 
 	@Override
 	public final List<EstadoTipoRelacionInstitucionDomain> list(final EstadoTipoRelacionInstitucionDomain domain) {
+
 		final EstadoTipoRelacionInstitucionEntity entity = EstadoTipoRelacionInstitucionAssembler.getInstance()
 				.toEntityFromDomain(domain);
-		List<EstadoTipoRelacionInstitucionEntity> result = daoFactory.getEstadoTipoRelacionInstitucionDAO()
+
+		List<EstadoTipoRelacionInstitucionEntity> resultEntityList = daoFactory.getEstadoTipoRelacionInstitucionDAO()
 				.read(entity);
-		return null;
+
+		return EstadoTipoRelacionInstitucionAssembler.getInstance().toDomainListFromEntity(resultEntityList);
 	}
 }

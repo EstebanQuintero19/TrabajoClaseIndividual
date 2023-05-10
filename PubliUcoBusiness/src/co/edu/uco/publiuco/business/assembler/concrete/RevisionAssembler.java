@@ -1,5 +1,7 @@
 package co.edu.uco.publiuco.business.assembler.concrete;
 
+import java.util.List;
+
 import co.edu.uco.publiuco.business.assembler.Assembler;
 import co.edu.uco.publiuco.business.domain.RevisionDomain;
 import co.edu.uco.publiuco.dto.RevisionDTO;
@@ -55,6 +57,12 @@ public class RevisionAssembler implements Assembler<RevisionDomain, RevisionDTO,
 				entity.getFechaSolicitudRevision(), entity.getFechaLimiteRevision(),
 				entity.getFechaCompletitudRevision(),
 				EstadoRevisionAssembler.getInstance().toDomainFromEntity(entity.getEstado()));
+	}
+
+	@Override
+	public List<RevisionDomain> toDomainListFromEntity(List<RevisionEntity> entityList) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

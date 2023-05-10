@@ -1,5 +1,7 @@
 package co.edu.uco.publiuco.business.assembler.concrete;
 
+import java.util.List;
+
 import co.edu.uco.publiuco.business.assembler.Assembler;
 import co.edu.uco.publiuco.business.domain.EscritorPublicacionDomain;
 import co.edu.uco.publiuco.dto.EscritorPublicacionDTO;
@@ -48,6 +50,12 @@ public class EscritorPublicacionAssembler
 				EscritorAssembler.getInstance().toDomainFromEntity(entity.getEscritor()),
 				PublicacionAssembler.getInstance().toDomainFromEntity(entity.getPublicacion()),
 				TipoEscritorAssembler.getInstance().toDomainFromEntity(entity.getTipoEscritor()));
+	}
+
+	@Override
+	public List<EscritorPublicacionDomain> toDomainListFromEntity(List<EscritorPublicacionEntity> entityList) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

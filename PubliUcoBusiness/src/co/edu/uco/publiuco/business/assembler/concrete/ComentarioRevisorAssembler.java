@@ -1,5 +1,7 @@
 package co.edu.uco.publiuco.business.assembler.concrete;
 
+import java.util.List;
+
 import co.edu.uco.publiuco.business.assembler.Assembler;
 import co.edu.uco.publiuco.business.domain.ComentarioRevisorDomain;
 import co.edu.uco.publiuco.dto.ComentarioRevisorDTO;
@@ -49,6 +51,48 @@ public class ComentarioRevisorAssembler
 				RevisorRevisionAssembler.getInstance().toDomainFromEntity(entity.getRevisorRevision()),
 				TipoComentarioRevisorAssembler.getInstance().toDomainFromEntity(entity.getTipoComentarioRevisor()),
 				entity.getComentario());
+	}
+
+	@Override
+	public co.edu.uco.publiuco.business.assembler.concrete.ComentarioRevisorDTO toDTOFromDomain(
+			co.edu.uco.publiuco.business.assembler.concrete.ComentarioRevisorDomain domian) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public co.edu.uco.publiuco.business.assembler.concrete.ComentarioRevisorDomain toDomainFromDto(
+			co.edu.uco.publiuco.business.assembler.concrete.ComentarioRevisorDTO dto) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ComentarioRevisorEntity toEntityFromDomain(
+			co.edu.uco.publiuco.business.assembler.concrete.ComentarioRevisorDomain domain) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<co.edu.uco.publiuco.business.assembler.concrete.ComentarioRevisorDomain> toDomainListFromEntity(
+			List<ComentarioRevisorEntity> entityList) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ComentarioRevisorDTO toDTOFromDomain(
+			co.edu.uco.publiuco.business.assembler.concrete.ComentarioRevisorDomain domian) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ComentarioRevisorEntity toEntityFromDomain(
+			co.edu.uco.publiuco.business.assembler.concrete.ComentarioRevisorDomain domain) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

@@ -1,5 +1,7 @@
 package co.edu.uco.publiuco.business.assembler.concrete;
 
+import java.util.List;
+
 import co.edu.uco.publiuco.business.assembler.Assembler;
 import co.edu.uco.publiuco.business.domain.PalabraClavePublicacionDomain;
 import co.edu.uco.publiuco.dto.PalabraClavePublicacionDTO;
@@ -43,6 +45,12 @@ public class PalabraClavePublicacionAssembler
 		return new PalabraClavePublicacionDomain(entity.getIdentificador(),
 				PublicacionAssembler.getInstance().toDomainFromEntity(entity.getPublicacion()),
 				entity.getPalabraClave());
+	}
+
+	@Override
+	public List<PalabraClavePublicacionDomain> toDomainListFromEntity(List<PalabraClavePublicacionEntity> entityList) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

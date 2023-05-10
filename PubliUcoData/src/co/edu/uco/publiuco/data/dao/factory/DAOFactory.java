@@ -79,11 +79,11 @@ public abstract class DAOFactory {
 
 	public abstract void cerrarConexion();
 
-	public abstract void iniciarTransaccion();
+	public abstract void initTransaction();
 
-	public abstract void confirmarTransaccion();
+	public abstract void commitTransaction();
 
-	public abstract void cancelarTransaccion();
+	public abstract void cancelTransaction();
 
 	public abstract EstadoTipoRelacionInstitucionDAO getEstadoTipoRelacionInstitucionDAO();
 

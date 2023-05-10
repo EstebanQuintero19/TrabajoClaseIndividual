@@ -1,5 +1,7 @@
 package co.edu.uco.publiuco.business.assembler.concrete;
 
+import java.util.List;
+
 import co.edu.uco.publiuco.business.assembler.Assembler;
 import co.edu.uco.publiuco.business.domain.EstadoVersionDomain;
 import co.edu.uco.publiuco.dto.EstadoVersionDTO;
@@ -36,6 +38,12 @@ public class EstadoVersionAssembler implements Assembler<EstadoVersionDomain, Es
 	@Override
 	public EstadoVersionDomain toDomainFromEntity(final EstadoVersionEntity entity) {
 		return new EstadoVersionDomain(entity.getIdentificador(), entity.getNombre(), entity.getDescripcion());
+	}
+
+	@Override
+	public List<EstadoVersionDomain> toDomainListFromEntity(List<EstadoVersionEntity> entityList) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

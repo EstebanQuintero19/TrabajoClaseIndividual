@@ -1,5 +1,7 @@
 package co.edu.uco.publiuco.business.assembler.concrete;
 
+import java.util.List;
+
 import co.edu.uco.publiuco.business.assembler.Assembler;
 import co.edu.uco.publiuco.business.domain.PlanCategoriaDomain;
 import co.edu.uco.publiuco.dto.PlanCategoriaDTO;
@@ -44,6 +46,12 @@ public class PlanCategoriaAssembler implements Assembler<PlanCategoriaDomain, Pl
 		return new PlanCategoriaDomain(entity.getIdentificador(),
 				CategoriaAssembler.getInstance().toDomainFromEntity(entity.getCategoria()), entity.getPrecio(),
 				entity.getFechaDesde(), entity.getFechaHasta());
+	}
+
+	@Override
+	public List<PlanCategoriaDomain> toDomainListFromEntity(List<PlanCategoriaEntity> entityList) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

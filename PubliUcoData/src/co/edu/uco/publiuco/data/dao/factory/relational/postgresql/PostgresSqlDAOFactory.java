@@ -104,41 +104,41 @@ import co.edu.uco.publiuco.data.dao.relational.sqlserver.TipoReporteSqlServerDAO
 import co.edu.uco.publiuco.data.dao.relational.sqlserver.TipoRevisionSqlServerDAO;
 import co.edu.uco.publiuco.data.dao.relational.sqlserver.VersionSqlServerDAO;
 
-public final class PostgresSqlDAOFactory extends DAOFactory {
+public final class PostgreSqlDAOFactory extends DAOFactory {
 
 	private Connection connection;
 
-	public PostgresSqlDAOFactory() {
+	public PostgreSqlDAOFactory() {
 		abrirConexion();
 	}
 
 	@Override
 	protected void abrirConexion() {
-		
+		// TODO Auto-generated method stub
 
 	}
 
 	@Override
 	public void cerrarConexion() {
-		
+		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	public void iniciarTransaccion() {
-		
+	public void initTransaction() {
+		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	public void confirmarTransaccion() {
-		
+	public void commitTransaction() {
+		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	public void cancelarTransaccion() {
-		
+	public void cancelTransaction() {
+		// TODO Auto-generated method stub
 
 	}
 

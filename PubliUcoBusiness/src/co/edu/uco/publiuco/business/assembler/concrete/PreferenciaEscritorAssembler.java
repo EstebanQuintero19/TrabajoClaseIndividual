@@ -1,5 +1,7 @@
 package co.edu.uco.publiuco.business.assembler.concrete;
 
+import java.util.List;
+
 import co.edu.uco.publiuco.business.assembler.Assembler;
 import co.edu.uco.publiuco.business.domain.PreferenciaEscritorDomain;
 import co.edu.uco.publiuco.dto.PreferenciaEscritorDTO;
@@ -43,5 +45,11 @@ public class PreferenciaEscritorAssembler
 		return new PreferenciaEscritorDomain(entity.getIdentificador(),
 				PerfilAssembler.getInstance().toDomainFromEntity(entity.getPerfil()),
 				EscritorAssembler.getInstance().toDomainFromEntity(entity.getEscritor()));
+	}
+
+	@Override
+	public List<PreferenciaEscritorDomain> toDomainListFromEntity(List<PreferenciaEscritorEntity> entityList) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

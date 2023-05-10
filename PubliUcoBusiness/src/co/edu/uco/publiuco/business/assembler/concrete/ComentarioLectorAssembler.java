@@ -1,5 +1,7 @@
 package co.edu.uco.publiuco.business.assembler.concrete;
 
+import java.util.List;
+
 import co.edu.uco.publiuco.business.assembler.Assembler;
 import co.edu.uco.publiuco.business.domain.ComentarioLectorDomain;
 import co.edu.uco.publiuco.dto.ComentarioLectorDTO;
@@ -57,6 +59,12 @@ public class ComentarioLectorAssembler
 				ComentarioLectorAssembler.getInstance().toDomainFromEntity(entity.getComentarioPadre()), entity.getComentario(),
 				entity.getFechaCalificacion(),
 				EstadoComentarioLectorAssembler.getInstance().toDomainFromEntity(entity.getEstado()));
+	}
+
+	@Override
+	public List<ComentarioLectorDomain> toDomainListFromEntity(List<ComentarioLectorEntity> entityList) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
