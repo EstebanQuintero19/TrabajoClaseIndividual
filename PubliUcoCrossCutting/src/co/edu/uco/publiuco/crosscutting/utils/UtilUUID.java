@@ -27,4 +27,8 @@ public final class UtilUUID {
 	public static final UUID getDefault(final UUID uuidvalue) {
 		return UtilObject.isNull(uuidvalue) ? DEFAULT_UUID : uuidvalue;
 	}
+	
+	public static final boolean isDefault(final UUID uuidValue) {
+		return DEFAULT_UUID.equals(getDefault(uuidValue));
+	}
 }

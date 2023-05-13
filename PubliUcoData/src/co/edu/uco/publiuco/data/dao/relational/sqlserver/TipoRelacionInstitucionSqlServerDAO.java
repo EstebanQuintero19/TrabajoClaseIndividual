@@ -6,7 +6,7 @@ import java.util.List;
 import co.edu.uco.publiuco.data.dao.TipoRelacionInstitucionDAO;
 import co.edu.uco.publiuco.entities.TipoRelacionInstitucionEntity;
 
-public class TipoRelacionInstitucionSqlServerDAO implements TipoRelacionInstitucionDAO{
+public final class TipoRelacionInstitucionSqlServerDAO implements TipoRelacionInstitucionDAO{
 
 	
 	public TipoRelacionInstitucionSqlServerDAO(final Connection connection) {

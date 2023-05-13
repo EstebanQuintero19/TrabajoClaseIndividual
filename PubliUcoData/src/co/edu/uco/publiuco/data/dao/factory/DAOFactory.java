@@ -71,13 +71,13 @@ public abstract class DAOFactory {
 		default:
 			throw new IllegalArgumentException("Not implemented yet");
 		}
-		
+
 		return daoFactory;
 	}
 
-	protected abstract void abrirConexion();
+	protected abstract void openConection();
 
-	public abstract void cerrarConexion();
+	public abstract void closeConection();
 
 	public abstract void initTransaction();
 
