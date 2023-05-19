@@ -1,11 +1,14 @@
 package co.edu.uco.publiuco.data.dao.relational.sqlserver;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 import co.edu.uco.publiuco.crosscutting.exception.PubliUcoDataException;
+import co.edu.uco.publiuco.crosscutting.exception.PubliUcoException;
 import co.edu.uco.publiuco.crosscutting.exception.PubliUcoDataException;
 import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
@@ -60,13 +63,25 @@ public final class EstadoTipoRelacionInstitucionSqlServerDAO extends SqlDAO<Esta
 
 		try (var preparedStatement = getConnection().prepareStatement(sqlStatement.toString())) {
 
+			setParameters(preparedStatement, parameters);
+			
+			return executeQuery(preparedStatement);
+		
+		} catch (final PubliUcoException exception) {
+			throw exception;
 		} catch (SQLException exception) {
-			// TODO: handle exception
+			var userMessage = "Se ha presentado un problema tratando de consultar la informacion del estado de tipo relacion institucion";
+			var technicalMessage = "Se ha presentado un problema de tipo SQLException dentro del metodo read de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+
+			throw PubliUcoDataException.create(technicalMessage, userMessage, exception);
 		} catch (Exception exception) {
-			// TODO: handle exception
+			var userMessage = "Se ha presentado un problema inesperado tratando de consultar la informacion del nuevo estado de tipo relacion institucion";
+			var technicalMessage = "Se ha presentado un problema inesperadp dentro del metodo executeQuery de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+
+			throw PubliUcoDataException.create(technicalMessage, userMessage, exception);
+
 		}
 
-		return null;
 	}
 
 	@Override
@@ -113,4 +128,61 @@ public final class EstadoTipoRelacionInstitucionSqlServerDAO extends SqlDAO<Esta
 	protected final String prepareOrderBy() {
 		return "ORDER BY nombre ASC";
 	}
+
+	@Override
+	protected void setParameters(PreparedStatement preaPreparedStatement, List<Object> parameters) {
+		try {
+		
+		if(!UtilObject.isNull(parameters))
+			for(int index = 0; index < parameters.size(); index++) {
+				preaPreparedStatement.setObject(index + 1, parameters.get(index));
+			}
+		
+	} catch (final SQLException exception) {
+		var userMessage = "Se ha presentado un problema tratando de registrar la informacion del nuevo estado de tipo relacion institucion";
+		var technicalMessage = "Se ha presentado un problema de tipo SQLException dentro del metodo create de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+
+		throw PubliUcoDataException.create(technicalMessage, userMessage, exception);
+	} catch (final Exception exception) {
+		var userMessage = "Se ha presentado un problema inesperado tratando de registrar la informacion del nuevo estado de tipo relacion institucion";
+		var technicalMessage = "Se ha presentado un problema inesperadp dentro del metodo create de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+
+		throw PubliUcoDataException.create(technicalMessage, userMessage, exception);
+
+	 }
+	
+	}
+
+	@Override
+	protected List<EstadoTipoRelacionInstitucionEntity> executeQuery(PreparedStatement preparedStatement) {
+		
+		final List<EstadoTipoRelacionInstitucionEntity> result = new ArrayList<>();
+		
+		try(var resultSet = preparedStatement.executeQuery()){
+			
+			while(resultSet.next()){
+				
+				var entityTmp =  new EstadoTipoRelacionInstitucionEntity(
+								resultSet.getObject("identificador",UUID.class),
+								resultSet.getString("nombre"),
+								resultSet.getString("descripcion"));
+				
+				result.add(entityTmp);
+			}
+			
+		} catch (final SQLException exception) {
+			var userMessage = "Se ha presentado un problema tratando de registrar la informacion del nuevo estado de tipo relacion institucion";
+			var technicalMessage = "Se ha presentado un problema de tipo SQLException dentro del metodo create de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+
+			throw PubliUcoDataException.create(technicalMessage, userMessage, exception);
+		} catch (final Exception exception) {
+			var userMessage = "Se ha presentado un problema inesperado tratando de registrar la informacion del nuevo estado de tipo relacion institucion";
+			var technicalMessage = "Se ha presentado un problema inesperadp dentro del metodo create de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+
+			throw PubliUcoDataException.create(technicalMessage, userMessage, exception);
+
+		 }
+		return result;
+	}
+	
 }
