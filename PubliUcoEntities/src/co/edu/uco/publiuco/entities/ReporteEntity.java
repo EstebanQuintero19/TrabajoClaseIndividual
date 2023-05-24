@@ -8,7 +8,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class ReporteEntity {
+public final class ReporteEntity {
 
 	private static final ReporteEntity DEFAULT_OBJECT = new ReporteEntity();
 	private UUID identificador;

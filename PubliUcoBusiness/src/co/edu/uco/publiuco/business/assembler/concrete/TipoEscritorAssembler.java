@@ -45,9 +45,14 @@ public class TipoEscritorAssembler implements Assembler<TipoEscritorDomain, Tipo
 	}
 
 	@Override
-	public List<TipoEscritorDomain> toDomainListFromEntity(List<TipoEscritorEntity> entityList) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<TipoEscritorDomain> toDomainListFromEntityList(List<TipoEscritorEntity> entityList) {
+
+		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
+	}
+
+	@Override
+	public List<TipoEscritorDTO> toDTOListFromDomainList(List<TipoEscritorDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
 	}
 
 }

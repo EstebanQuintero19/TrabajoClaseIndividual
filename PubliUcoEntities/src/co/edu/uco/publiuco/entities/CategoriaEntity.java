@@ -6,7 +6,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class CategoriaEntity {
+public final class CategoriaEntity {
 	
 	private static final CategoriaEntity DEFAULT_OBJECT = new CategoriaEntity();
 	private UUID identificador;
@@ -24,7 +24,8 @@ public class CategoriaEntity {
 		setEstado(EstadoCategoriaEntity.getDefaultObject());
 	}
 
-	public CategoriaEntity(UUID identificador, CategoriaEntity categoriaPadre, String nombre, String descripcion, EstadoCategoriaEntity estado) {
+	public CategoriaEntity(UUID identificador, CategoriaEntity categoriaPadre, String nombre, String descripcion,
+			EstadoCategoriaEntity estado) {
 		super();
 		setIdentificador(identificador);
 		setCategoriaPadre(categoriaPadre);

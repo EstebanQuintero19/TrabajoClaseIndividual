@@ -27,9 +27,9 @@ public class TipoEscritorBusinessImpl implements TipoEscritorBusiness {
 	public List<TipoEscritorDomain> list(TipoEscritorDomain domain) {
 		final TipoEscritorEntity entity = TipoEscritorAssembler.getInstance().toEntityFromDomain(domain);
 
-		final List<TipoEscritorEntity> result = daoFactory.getTipoEscritorDAO().read(entity);
+		List<TipoEscritorEntity> resultEntityList = daoFactory.getTipoEscritorDAO().read(entity);
 
-		return null;
+		return TipoEscritorAssembler.getInstance().toDomainListFromEntityList(resultEntityList);
 	}
 
 	@Override

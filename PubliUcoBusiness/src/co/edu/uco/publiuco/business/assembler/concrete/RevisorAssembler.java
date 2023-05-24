@@ -75,9 +75,14 @@ public class RevisorAssembler implements Assembler<RevisorDomain, RevisorDTO, Re
 	}
 
 	@Override
-	public List<RevisorDomain> toDomainListFromEntity(List<RevisorEntity> entityList) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<RevisorDomain> toDomainListFromEntityList(List<RevisorEntity> entityList) {
+
+		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
+	}
+
+	@Override
+	public List<RevisorDTO> toDTOListFromDomainList(List<RevisorDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
 	}
 
 }

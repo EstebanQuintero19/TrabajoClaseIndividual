@@ -5,7 +5,7 @@ import java.util.UUID;
 import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class CategoriaAdministradorCategoriaDTO {
+public final class CategoriaAdministradorCategoriaDTO {
 
 	private UUID identificador;
 	private CategoriaDTO categoria;

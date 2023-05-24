@@ -5,7 +5,7 @@ import java.util.UUID;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class RespuestaDomain {
+public final class RespuestaDomain {
 	
 	private static final RespuestaDomain DEFAULT_OBJECT = new RespuestaDomain();
 	private UUID identificador;

@@ -4,8 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.List;
 
-import co.edu.uco.publiuco.crosscutting.exception.PubliUcoDataException;
-import co.edu.uco.publiuco.crosscutting.exception.PubliUcoDataException;
+import co.edu.uco.publiuco.crosscutting.exception.PubliucoDataException;
 import co.edu.uco.publiuco.crosscutting.utils.UtilSql;
 
 public abstract class SqlDAO<E> {
@@ -25,7 +24,7 @@ public abstract class SqlDAO<E> {
 			var userMessage = "Se ha presentado un problema tratando de llevar a cabo la operacion deseada. Por favor intente de nuevo y si el problema persiste comuniquese con el administrador de la aplicacion.";
 			var technicalMessage = " No se ha podido crear el SqlDAO, debido a que la conexion no esta abierta";
 		
-			throw PubliUcoDataException.create(technicalMessage, userMessage);
+			throw PubliucoDataException.create(technicalMessage, userMessage);
 		}
 		this.connection = connection;
 	}
@@ -37,8 +36,9 @@ public abstract class SqlDAO<E> {
 	protected abstract String prepareWhere(E entity, List<Object> parameters);
 	
 	protected abstract String prepareOrderBy();
-
-	protected abstract void setParameters(PreparedStatement preaPreparedStatement, List<Object> parameters);
+	
+	protected abstract void setParameters(PreparedStatement preparedStatement, List<Object> parameters);
 	
 	protected abstract List<E> executeQuery(PreparedStatement preparedStatement);
+
 }

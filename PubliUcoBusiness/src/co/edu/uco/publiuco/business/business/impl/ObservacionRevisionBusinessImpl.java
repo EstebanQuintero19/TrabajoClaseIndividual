@@ -27,9 +27,9 @@ public class ObservacionRevisionBusinessImpl implements ObservacionRevisionBusin
 	public List<ObservacionRevisionDomain> list(ObservacionRevisionDomain domain) {
 		final ObservacionRevisionEntity entity = ObservacionRevisionAssembler.getInstance().toEntityFromDomain(domain);
 
-		final List<ObservacionRevisionEntity> result = daoFactory.getObservacionRevisionDAO().read(entity);
+		List<ObservacionRevisionEntity> resultEntityList = daoFactory.getObservacionRevisionDAO().read(entity);
 
-		return null;
+		return ObservacionRevisionAssembler.getInstance().toDomainListFromEntityList(resultEntityList);
 	}
 
 	@Override

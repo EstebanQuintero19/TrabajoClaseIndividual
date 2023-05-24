@@ -29,9 +29,9 @@ public class SuscripcionPublicacionBusinessImpl implements SuscripcionPublicacio
 		final SuscripcionPublicacionEntity entity = SuscripcionPublicacionAssembler.getInstance()
 				.toEntityFromDomain(domain);
 
-		final List<SuscripcionPublicacionEntity> result = daoFactory.getSuscripcionPublicacionDAO().read(entity);
+		List<SuscripcionPublicacionEntity> resultEntityList = daoFactory.getSuscripcionPublicacionDAO().read(entity);
 
-		return null;
+		return SuscripcionPublicacionAssembler.getInstance().toDomainListFromEntityList(resultEntityList);
 	}
 
 	@Override

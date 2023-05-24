@@ -41,9 +41,14 @@ public class EstadoPlanAssembler implements Assembler<EstadoPlanDomain, EstadoPl
 	}
 
 	@Override
-	public List<EstadoPlanDomain> toDomainListFromEntity(List<EstadoPlanEntity> entityList) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<EstadoPlanDomain> toDomainListFromEntityList(List<EstadoPlanEntity> entityList) {
+
+		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
+	}
+
+	@Override
+	public List<EstadoPlanDTO> toDTOListFromDomainList(List<EstadoPlanDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
 	}
 
 }

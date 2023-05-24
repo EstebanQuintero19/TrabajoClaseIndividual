@@ -29,10 +29,10 @@ public class HistorialAccesoPublicacionBusinessImpl implements HistorialAccesoPu
 		final HistorialAccesoPublicacionEntity entity = HistorialAccesoPublicacionAssembler.getInstance()
 				.toEntityFromDomain(domain);
 
-		final List<HistorialAccesoPublicacionEntity> result = daoFactory.getHistorialAccesoPublicacionDAO()
+		List<HistorialAccesoPublicacionEntity> resultEntityList = daoFactory.getHistorialAccesoPublicacionDAO()
 				.read(entity);
 
-		return null;
+		return HistorialAccesoPublicacionAssembler.getInstance().toDomainListFromEntityList(resultEntityList);
 	}
 
 	@Override

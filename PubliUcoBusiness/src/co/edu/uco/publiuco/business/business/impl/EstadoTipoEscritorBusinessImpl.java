@@ -27,9 +27,9 @@ public class EstadoTipoEscritorBusinessImpl implements EstadoTipoEscritorBusines
 	public List<EstadoTipoEscritorDomain> list(EstadoTipoEscritorDomain domain) {
 		final EstadoTipoEscritorEntity entity = EstadoTipoEscritorAssembler.getInstance().toEntityFromDomain(domain);
 
-		final List<EstadoTipoEscritorEntity> result = daoFactory.getEstadoTipoEscritorDAO().read(entity);
+		List<EstadoTipoEscritorEntity> resultEntityList = daoFactory.getEstadoTipoEscritorDAO().read(entity);
 
-		return null;
+		return EstadoTipoEscritorAssembler.getInstance().toDomainListFromEntityList(resultEntityList);
 	}
 
 }

@@ -27,9 +27,9 @@ public class TipoReporteBusinessImpl implements TipoReporteBusiness {
 	public List<TipoReporteDomain> list(TipoReporteDomain domain) {
 		final TipoReporteEntity entity = TipoReporteAssembler.getInstance().toEntityFromDomain(domain);
 
-		final List<TipoReporteEntity> result = daoFactory.getTipoReporteDAO().read(entity);
+		List<TipoReporteEntity> resultEntityList = daoFactory.getTipoReporteDAO().read(entity);
 
-		return null;
+		return TipoReporteAssembler.getInstance().toDomainListFromEntityList(resultEntityList);
 	}
 
 }

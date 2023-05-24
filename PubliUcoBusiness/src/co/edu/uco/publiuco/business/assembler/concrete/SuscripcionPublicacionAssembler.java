@@ -1,5 +1,7 @@
 package co.edu.uco.publiuco.business.assembler.concrete;
 
+import java.util.List;
+
 import co.edu.uco.publiuco.business.assembler.Assembler;
 import co.edu.uco.publiuco.business.domain.SuscripcionPublicacionDomain;
 import co.edu.uco.publiuco.dto.SuscripcionPublicacionDTO;
@@ -47,10 +49,15 @@ public class SuscripcionPublicacionAssembler
 	}
 
 	@Override
-	public SuscripcionPublicacionDomain toDomainFromDto(
-			co.edu.uco.publiuco.business.assembler.concrete.SuscripcionPublicacionDTO dto) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<SuscripcionPublicacionDomain> toDomainListFromEntityList(
+			List<SuscripcionPublicacionEntity> entityList) {
+
+		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
+	}
+
+	@Override
+	public List<SuscripcionPublicacionDTO> toDTOListFromDomainList(List<SuscripcionPublicacionDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
 	}
 
 }

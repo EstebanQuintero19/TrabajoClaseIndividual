@@ -8,7 +8,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilDate;
 import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class PublicacionEntity {
+public final class PublicacionEntity {
 
 	private static final PublicacionEntity DEFAULT_OBJECT = new PublicacionEntity();
 	private UUID identificador;

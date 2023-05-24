@@ -8,7 +8,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class ComentarioLectorEntity {
+public final class ComentarioLectorEntity {
 
 	private static final ComentarioLectorEntity DEFAULT_OBJECT = new ComentarioLectorEntity();
 	private UUID identificador;

@@ -569,7 +569,7 @@ public final class Messages {
 		public static final String DROP_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado una excepcion no conocido al momento de eliminar un PublicacionDTO. Por favor valide la traza completa de la excepcion presentada...";
 
 	}
-	
+
 	public static final class RespuestaFacadeImplMessages {
 
 		private RespuestaFacadeImplMessages() {
@@ -579,7 +579,248 @@ public final class Messages {
 		public static final String REGISTER_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado una excepcion no conocido al momento de registrar un nuevo RespuestaDTO. Por favor valide la traza completa de la excepcion presentada...";
 		public static final String LIST_EXCEPTION_USER_MESSAGE = "Se ha presentado un problema tratando de listar la informacion de la respuesta. Por favor intente de nuevo y si el problema persiste comuniquese con el administrador de la aplicacion.";
 		public static final String LIST_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado una excepcion no conocido al momento de listar un RespuestaDTO. Por favor valide la traza completa de la excepcion presentada...";
-		
+
 	}
+
+	public static final class CommonControllerMessages {
+
+		private CommonControllerMessages() {
+		}
+
+		public static final String REGISTER_FAILED = "Sea presentado un problema inesperado. Por favor intente de nuevo y si el problema persiste comuniquese con el administrador de la aplicacion.";
+
+	}
+
+	public static final class EstadoTipoRelacionInstitucionControllerMessages {
+
+		private EstadoTipoRelacionInstitucionControllerMessages() {
+		}
+
+		public static final String REGISTER_NEW_SUCESS = "El nuevo estado tipo relacion institucion se ha regitrado de forma satisfactoria";
+
+	}
+
+	public static final class CategoriaControllerMessages {
+
+		private CategoriaControllerMessages() {
+		}
+
+		public static final String REGISTER_NEW_SUCESS = "La nueva categoria se ha regitrado de forma satisfactoria";
+
+	}
+
+	public static final class EstadoComentarioLectorControllerMessages {
+
+		private EstadoComentarioLectorControllerMessages() {
+		}
+
+		public static final String REGISTER_NEW_SUCESS = "El nuevo estado comentario lector se ha regitrado de forma satisfactoria";
+
+	}
+
+	public static final class EstadoLectorControllerMessages {
+
+		private EstadoLectorControllerMessages() {
+		}
+
+		public static final String REGISTER_NEW_SUCESS = "El nuevo estado lector se ha regitrado de forma satisfactoria";
+
+	}
+
+	public static final class EstadoPublicacionControllerMessages {
+
+		private EstadoPublicacionControllerMessages() {
+		}
+
+		public static final String REGISTER_NEW_SUCESS = "El nuevo estado publicacion se ha regitrado de forma satisfactoria";
+
+	}
+
+	public static final class LectorControllerMessages {
+
+		private LectorControllerMessages() {
+		}
+
+		public static final String REGISTER_NEW_SUCESS = "El nuevo lector se ha regitrado de forma satisfactoria";
+
+	}
+
+	public static final class PublicacionControllerMessages {
+
+		private PublicacionControllerMessages() {
+		}
+
+		public static final String REGISTER_NEW_SUCESS = "La nueva publicacion se ha regitrado de forma satisfactoria";
+
+	}
+
+	public static final class RespuestaControllerMessages {
+
+		private RespuestaControllerMessages() {
+		}
+
+		public static final String REGISTER_NEW_SUCESS = "La nueva respuesta se ha regitrado de forma satisfactoria";
+
+	}
+
+	public static final class TipoAccesoControllerMessages {
+
+		private TipoAccesoControllerMessages() {
+		}
+
+		public static final String REGISTER_NEW_SUCESS = "El nuevo tipo acceso se ha regitrado de forma satisfactoria";
+
+	}
+
+	public static final class TipoIdentificacionControllerMessages {
+
+		private TipoIdentificacionControllerMessages() {
+		}
+
+		public static final String REGISTER_NEW_SUCESS = "El nuevo tipo identificacion se ha regitrado de forma satisfactoria";
+
+	}
+
+	public static final class TipoRelacionInstitucionControllerMessages {
+
+		private TipoRelacionInstitucionControllerMessages() {
+		}
+
+		public static final String REGISTER_NEW_SUCESS = "El nuevo tipo relacion institucion se ha regitrado de forma satisfactoria";
+
+	}
+
+	public static final class ComentarioLectorControllerMessages {
+
+		private ComentarioLectorControllerMessages() {
+		}
+
+		public static final String REGISTER_NEW_SUCESS = "El nuevo comentario lector se ha regitrado de forma satisfactoria";
+
+	}
+
+	public static final class EstadoTipoAccesoControllerMessages {
+
+		private EstadoTipoAccesoControllerMessages() {
+		}
+
+		public static final String REGISTER_NEW_SUCESS = "El nuevo estado de tipo de acceso se ha regitrado de forma satisfactoria";
+
+	}
+	
+	public static final class EstadoTipoIdentificacionControllerMessages {
+
+		private EstadoTipoIdentificacionControllerMessages() {
+		}
+
+		public static final String REGISTER_NEW_SUCESS = "El nuevo estado de tipo de identificacion se ha regitrado de forma satisfactoria";
+
+	}
+
+	public static final class EstadoTipoRelacionInstitucionValidationMessages {
+
+		private EstadoTipoRelacionInstitucionValidationMessages() {
+		}
+
+		public static final String GENERAL = "No es posible registrar un nuevo estado tipo relacion institucion con los datos ingresados";
+		public static final String IDENTIFICADOR_IS_NULL = "No es posible continuar con el identificador del estado tipo relacion institucion vacio";
+		public static final String IDENTIFICADOR_IS_DEFAULT = "No es posible tener el identificador por defecto del estado del tipo relacion institucion";
+		public static final String NOMBRE_IS_NULL = "No es posible continuar con el nombre del estado tipo relacion institucion vacio";
+		public static final String NOMBRE_IS_DEFAULT = "No es posible tener el nombre por defecto del estado del tipo relacion institucion";
+		public static final String DESCRIPCION_IS_NULL = "No es posible continuar con la descrpcion del estado tipo relacion institucion vacio";
+		public static final String DESCRIPCION_IS_DEFAULT = "No es posible tener la descripcion por defecto del estado del tipo relacion institucion";
+
+	}
+
+	public static final class EstadoComentarioLectorValidationMessages {
+
+		private EstadoComentarioLectorValidationMessages() {
+		}
+
+		public static final String GENERAL = "No es posible registrar un nuevo estado comentario lector con los datos ingresados";
+		public static final String IDENTIFICADOR_IS_NULL = "No es posible continuar con el identificador del estado comentario lector vacio";
+		public static final String IDENTIFICADOR_IS_DEFAULT = "No es posible tener el identificador por defecto del estado comentario lector";
+		public static final String NOMBRE_IS_NULL = "No es posible continuar con el nombre del estado comentario lector vacio";
+		public static final String NOMBRE_IS_DEFAULT = "No es posible tener el nombre por defecto del estado comentario lector";
+		public static final String DESCRIPCION_IS_NULL = "No es posible continuar con la descrpcion del estado comentario lector vacio";
+		public static final String DESCRIPCION_IS_DEFAULT = "No es posible tener la descripcion por defecto del estado comentario lector";
+
+	}
+
+	public static final class EstadoLectorValidationMessages {
+
+		private EstadoLectorValidationMessages() {
+		}
+
+		public static final String GENERAL = "No es posible registrar un nuevo estado lector con los datos ingresados";
+		public static final String IDENTIFICADOR_IS_NULL = "No es posible continuar con el identificador del estado lector vacio";
+		public static final String IDENTIFICADOR_IS_DEFAULT = "No es posible tener el identificador por defecto del estado lector";
+		public static final String NOMBRE_IS_NULL = "No es posible continuar con el nombre del estado lector vacio";
+		public static final String NOMBRE_IS_DEFAULT = "No es posible tener el nombre por defecto del estado lector";
+		public static final String DESCRIPCION_IS_NULL = "No es posible continuar con la descrpcion del estado lector vacio";
+		public static final String DESCRIPCION_IS_DEFAULT = "No es posible tener la descripcion por defecto del estado lector";
+
+	}
+
+	public static final class EstadoPublicacionValidationMessages {
+
+		private EstadoPublicacionValidationMessages() {
+		}
+
+		public static final String GENERAL = "No es posible registrar un nuevo estado publicacion con los datos ingresados";
+		public static final String IDENTIFICADOR_IS_NULL = "No es posible continuar con el identificador del estado publicacion vacio";
+		public static final String IDENTIFICADOR_IS_DEFAULT = "No es posible tener el identificador por defecto del estado publicacion";
+		public static final String NOMBRE_IS_NULL = "No es posible continuar con el nombre del estado publicacion vacio";
+		public static final String NOMBRE_IS_DEFAULT = "No es posible tener el nombre por defecto del estado publicacion";
+		public static final String DESCRIPCION_IS_NULL = "No es posible continuar con la descrpcion del estado publicacion vacio";
+		public static final String DESCRIPCION_IS_DEFAULT = "No es posible tener la descripcion por defecto del estado publicacion";
+
+	}
+
+	public static final class EstadoTipoAccesoValidationMessages {
+
+		private EstadoTipoAccesoValidationMessages() {
+		}
+
+		public static final String GENERAL = "No es posible registrar un nuevo estado tipo acceso con los datos ingresados";
+		public static final String IDENTIFICADOR_IS_NULL = "No es posible continuar con el identificador del estado tipo acceso vacio";
+		public static final String IDENTIFICADOR_IS_DEFAULT = "No es posible tener el identificador por defecto del estado tipo acceso";
+		public static final String NOMBRE_IS_NULL = "No es posible continuar con el nombre del estado tipo acceso vacio";
+		public static final String NOMBRE_IS_DEFAULT = "No es posible tener el nombre por defecto del estado tipo acceso";
+		public static final String DESCRIPCION_IS_NULL = "No es posible continuar con la descrpcion del estado tipo acceso vacio";
+		public static final String DESCRIPCION_IS_DEFAULT = "No es posible tener la descripcion por defecto del estado tipo acceso";
+
+	}
+	
+	public static final class EstadoTipoIdentificacionValidationMessages {
+
+		private EstadoTipoIdentificacionValidationMessages() {
+		}
+
+		public static final String GENERAL = "No es posible registrar un nuevo estado tipo identificacion con los datos ingresados";
+		public static final String IDENTIFICADOR_IS_NULL = "No es posible continuar con el identificador del estado tipo identificacion vacio";
+		public static final String IDENTIFICADOR_IS_DEFAULT = "No es posible tener el identificador por defecto del estado tipo identificacion";
+		public static final String NOMBRE_IS_NULL = "No es posible continuar con el nombre del estado tipo identificacion vacio";
+		public static final String NOMBRE_IS_DEFAULT = "No es posible tener el nombre por defecto del estado tipo identificacion";
+		public static final String DESCRIPCION_IS_NULL = "No es posible continuar con la descrpcion del estado tipo identificacion vacio";
+		public static final String DESCRIPCION_IS_DEFAULT = "No es posible tener la descripcion por defecto del estado tipo identificacion";
+
+	}
+	
+	public static final class LectorValidationMessages {
+
+		private LectorValidationMessages() {
+		}
+
+		public static final String GENERAL = "No es posible registrar un nuevo lector con los datos ingresados";
+		public static final String IDENTIFICADOR_IS_NULL = "No es posible continuar con el identificador del lector vacio";
+		public static final String IDENTIFICADOR_IS_DEFAULT = "No es posible tener el identificador por defecto del lector";
+		public static final String NOMBRE_IS_NULL = "No es posible continuar con el nombre del lector vacio";
+		public static final String NOMBRE_IS_DEFAULT = "No es posible tener el nombre por defecto del lector";
+		public static final String DESCRIPCION_IS_NULL = "No es posible continuar con la descrpcion del lector vacio";
+		public static final String DESCRIPCION_IS_DEFAULT = "No es posible tener la descripcion por defecto del lector";
+
+	}
+	
 
 }

@@ -5,7 +5,7 @@ import java.util.UUID;
 import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class EscritorPublicacionDTO {
+public final class EscritorPublicacionDTO {
 
 	private UUID identificador;
 	private EscritorDTO escritor;

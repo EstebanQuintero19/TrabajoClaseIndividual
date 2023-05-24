@@ -27,9 +27,9 @@ public class VersionBusinessImpl implements VersionBusiness {
 	public List<VersionDomain> list(VersionDomain domain) {
 		final VersionEntity entity = VersionAssembler.getInstance().toEntityFromDomain(domain);
 
-		final List<VersionEntity> result = daoFactory.getVersionDAO().read(entity);
+		List<VersionEntity> resultEntityList = daoFactory.getVersionDAO().read(entity);
 
-		return null;
+		return VersionAssembler.getInstance().toDomainListFromEntityList(resultEntityList);
 	}
 
 	@Override

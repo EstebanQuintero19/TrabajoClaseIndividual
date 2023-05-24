@@ -7,7 +7,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
 
-public class AdministradorCategoriaEntity {
+public final class AdministradorCategoriaEntity {
 	
 	private static final AdministradorCategoriaEntity DEFAULT_OBJECT = new AdministradorCategoriaEntity();
 	private UUID identificador;

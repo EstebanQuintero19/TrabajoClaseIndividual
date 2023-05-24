@@ -6,7 +6,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class LectorEntity {
+public final class LectorEntity {
 	
 	private static final LectorEntity DEFAULT_OBJECT = new LectorEntity();
 	private UUID identificador;

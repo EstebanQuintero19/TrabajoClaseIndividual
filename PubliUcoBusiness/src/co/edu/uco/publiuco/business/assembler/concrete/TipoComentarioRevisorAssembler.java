@@ -41,9 +41,14 @@ public class TipoComentarioRevisorAssembler implements Assembler<TipoComentarioR
 	}
 
 	@Override
-	public List<TipoComentarioRevisorDomain> toDomainListFromEntity(List<TipoComentarioRevisorEntity> entityList) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<TipoComentarioRevisorDomain> toDomainListFromEntityList(List<TipoComentarioRevisorEntity> entityList) {
+
+		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
+	}
+
+	@Override
+	public List<TipoComentarioRevisorDTO> toDTOListFromDomainList(List<TipoComentarioRevisorDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
 	}
 
 }

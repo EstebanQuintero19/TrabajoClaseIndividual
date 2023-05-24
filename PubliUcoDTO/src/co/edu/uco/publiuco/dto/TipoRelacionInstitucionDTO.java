@@ -1,10 +1,12 @@
+package co.edu.uco.publiuco.dto;
+
 import java.util.UUID;
 
 import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class TipoRelacionInstitucionDTO {
+public final class TipoRelacionInstitucionDTO {
 	
 	private UUID identificador;
 	private String nombre;

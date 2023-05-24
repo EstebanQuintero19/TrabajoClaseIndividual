@@ -9,7 +9,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class VersionEntity {
+public final class VersionEntity {
 
 	private static final VersionEntity DEFAULT_OBJECT = new VersionEntity();
 	private UUID identificador;

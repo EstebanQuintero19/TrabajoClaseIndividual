@@ -1,8 +1,6 @@
 package co.edu.uco.publiuco.business.assembler.concrete;
 
 import java.util.List;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
 
 import co.edu.uco.publiuco.business.assembler.Assembler;
 import co.edu.uco.publiuco.business.domain.EstadoTipoRelacionInstitucionDomain;
@@ -13,15 +11,15 @@ public final class EstadoTipoRelacionInstitucionAssembler implements
 		Assembler<EstadoTipoRelacionInstitucionDomain, EstadoTipoRelacionInstitucionDTO, EstadoTipoRelacionInstitucionEntity> {
 
 	private static final Assembler<EstadoTipoRelacionInstitucionDomain, EstadoTipoRelacionInstitucionDTO, EstadoTipoRelacionInstitucionEntity> INSTANCE = new EstadoTipoRelacionInstitucionAssembler();
-	
+
 	private EstadoTipoRelacionInstitucionAssembler() {
 		super();
 	}
-	
-	public static final Assembler<EstadoTipoRelacionInstitucionDomain, EstadoTipoRelacionInstitucionDTO, EstadoTipoRelacionInstitucionEntity> getInstance(){
+
+	public static final Assembler<EstadoTipoRelacionInstitucionDomain, EstadoTipoRelacionInstitucionDTO, EstadoTipoRelacionInstitucionEntity> getInstance() {
 		return INSTANCE;
 	}
-	
+
 	@Override
 	public EstadoTipoRelacionInstitucionDTO toDTOFromDomain(final EstadoTipoRelacionInstitucionDomain domain) {
 		return EstadoTipoRelacionInstitucionDTO.create().setIdentificador(domain.getIdentificador())
@@ -46,10 +44,16 @@ public final class EstadoTipoRelacionInstitucionAssembler implements
 	}
 
 	@Override
-	public List<EstadoTipoRelacionInstitucionDomain> toDomainListFromEntity(
+	public List<EstadoTipoRelacionInstitucionDomain> toDomainListFromEntityList(
 			List<EstadoTipoRelacionInstitucionEntity> entityList) {
-		
-	    return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
-		
+
+		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
+	}
+
+	@Override
+	public List<EstadoTipoRelacionInstitucionDTO> toDTOListFromDomainList(
+			List<EstadoTipoRelacionInstitucionDomain> domainList) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

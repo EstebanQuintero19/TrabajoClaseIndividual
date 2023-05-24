@@ -6,7 +6,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class PalabraClavePublicacionEntity {
+public final class PalabraClavePublicacionEntity {
 	
 	private static final PalabraClavePublicacionEntity DEFAULT_OBJECT = new PalabraClavePublicacionEntity();
 	private UUID identificador;

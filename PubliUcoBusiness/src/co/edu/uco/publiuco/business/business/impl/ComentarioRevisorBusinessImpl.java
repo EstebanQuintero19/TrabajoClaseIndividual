@@ -27,9 +27,9 @@ public class ComentarioRevisorBusinessImpl implements ComentarioRevisorBusiness 
 	public List<ComentarioRevisorDomain> list(ComentarioRevisorDomain domain) {
 		final ComentarioRevisorEntity entity = ComentarioRevisorAssembler.getInstance().toEntityFromDomain(domain);
 
-		final List<ComentarioRevisorEntity> result = daoFactory.getComentarioRevisorDAO().read(entity);
+		List<ComentarioRevisorEntity> resultEntityList = daoFactory.getComentarioRevisorDAO().read(entity);
 
-		return null;
+		return ComentarioRevisorAssembler.getInstance().toDomainListFromEntityList(resultEntityList);
 	}
 
 	@Override

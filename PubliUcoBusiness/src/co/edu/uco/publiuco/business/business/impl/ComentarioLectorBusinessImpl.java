@@ -27,9 +27,10 @@ public class ComentarioLectorBusinessImpl implements ComentarioLectorBusiness {
 	public List<ComentarioLectorDomain> list(ComentarioLectorDomain domain) {
 		final ComentarioLectorEntity entity = ComentarioLectorAssembler.getInstance().toEntityFromDomain(domain);
 
-		final List<ComentarioLectorEntity> result = daoFactory.getComentarioLectorDAO().read(entity);
+		List<ComentarioLectorEntity> resultEntityList = daoFactory.getComentarioLectorDAO()
+				.read(entity);
 
-		return null;
+		return ComentarioLectorAssembler.getInstance().toDomainListFromEntityList(resultEntityList);
 	}
 
 	@Override

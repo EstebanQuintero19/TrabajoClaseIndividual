@@ -5,7 +5,7 @@ import java.util.UUID;
 import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class PerfilDomain {
+public final class PerfilDomain {
 
 	private static final PerfilDomain DEFAULT_OBJECT = new PerfilDomain();
 	private UUID identificador;

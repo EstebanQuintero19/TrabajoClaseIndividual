@@ -29,9 +29,9 @@ public class TipoRelacionInstitucionBusinessImpl implements TipoRelacionInstituc
 		final TipoRelacionInstitucionEntity entity = TipoRelacionInstitucionAssembler.getInstance()
 				.toEntityFromDomain(domain);
 
-		final List<TipoRelacionInstitucionEntity> result = daoFactory.getTipoRelacionInstitucionDAO().read(entity);
+		List<TipoRelacionInstitucionEntity> resultEntityList = daoFactory.getTipoRelacionInstitucionDAO().read(entity);
 
-		return null;
+		return TipoRelacionInstitucionAssembler.getInstance().toDomainListFromEntityList(resultEntityList);
 	}
 
 	@Override

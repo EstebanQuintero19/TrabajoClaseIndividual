@@ -46,9 +46,14 @@ public class TipoIdentificacionAssembler
 	}
 
 	@Override
-	public List<TipoIdentificacionDomain> toDomainListFromEntity(List<TipoIdentificacionEntity> entityList) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<TipoIdentificacionDomain> toDomainListFromEntityList(List<TipoIdentificacionEntity> entityList) {
+
+		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
+	}
+
+	@Override
+	public List<TipoIdentificacionDTO> toDTOListFromDomainList(List<TipoIdentificacionDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
 	}
 
 }

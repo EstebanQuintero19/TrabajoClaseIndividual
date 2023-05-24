@@ -29,9 +29,9 @@ public class TipoComentarioRevisorBusinessImpl implements TipoComentarioRevisorB
 		final TipoComentarioRevisorEntity entity = TipoComentarioRevisorAssembler.getInstance()
 				.toEntityFromDomain(domain);
 
-		final List<TipoComentarioRevisorEntity> result = daoFactory.getTipoComentarioRevisorDAO().read(entity);
+		List<TipoComentarioRevisorEntity> resultEntityList = daoFactory.getTipoComentarioRevisorDAO().read(entity);
 
-		return null;
+		return TipoComentarioRevisorAssembler.getInstance().toDomainListFromEntityList(resultEntityList);
 	}
 
 }

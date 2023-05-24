@@ -41,9 +41,14 @@ public class TipoReporteAssembler implements Assembler<TipoReporteDomain, TipoRe
 	}
 
 	@Override
-	public List<TipoReporteDomain> toDomainListFromEntity(List<TipoReporteEntity> entityList) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<TipoReporteDomain> toDomainListFromEntityList(List<TipoReporteEntity> entityList) {
+
+		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
+	}
+
+	@Override
+	public List<TipoReporteDTO> toDTOListFromDomainList(List<TipoReporteDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
 	}
 
 }

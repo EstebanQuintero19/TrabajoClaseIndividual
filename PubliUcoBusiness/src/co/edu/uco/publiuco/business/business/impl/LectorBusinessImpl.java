@@ -27,9 +27,9 @@ public class LectorBusinessImpl implements LectorBusiness {
 	public List<LectorDomain> list(LectorDomain domain) {
 		final LectorEntity entity = LectorAssembler.getInstance().toEntityFromDomain(domain);
 
-		final List<LectorEntity> result = daoFactory.getLectorDAO().read(entity);
+		List<LectorEntity> resultEntityList = daoFactory.getLectorDAO().read(entity);
 
-		return null;
+		return LectorAssembler.getInstance().toDomainListFromEntityList(resultEntityList);
 	}
 
 	@Override

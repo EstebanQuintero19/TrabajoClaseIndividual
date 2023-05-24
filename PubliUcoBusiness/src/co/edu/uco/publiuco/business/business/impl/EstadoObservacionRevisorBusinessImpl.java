@@ -2,6 +2,7 @@ package co.edu.uco.publiuco.business.business.impl;
 
 import java.util.List;
 
+
 import co.edu.uco.publiuco.business.assembler.concrete.EstadoObservacionRevisorAssembler;
 import co.edu.uco.publiuco.business.business.EstadoObservacionRevisorBusiness;
 import co.edu.uco.publiuco.business.domain.EstadoObservacionRevisorDomain;
@@ -29,9 +30,10 @@ public class EstadoObservacionRevisorBusinessImpl implements EstadoObservacionRe
 		final EstadoObservacionRevisorEntity entity = EstadoObservacionRevisorAssembler.getInstance()
 				.toEntityFromDomain(domain);
 
-		final List<EstadoObservacionRevisorEntity> result = daoFactory.getEstadoObservacionRevisorDAO().read(entity);
+		List<EstadoObservacionRevisorEntity> resultEntityList = daoFactory.getEstadoObservacionRevisorDAO()
+				.read(entity);
 
-		return null;
+		return EstadoObservacionRevisorAssembler.getInstance().toDomainListFromEntityList(resultEntityList);
 	}
 
 }

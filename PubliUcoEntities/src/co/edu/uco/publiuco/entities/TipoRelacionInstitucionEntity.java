@@ -6,7 +6,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class TipoRelacionInstitucionEntity {
+public final class TipoRelacionInstitucionEntity {
 	
 	private static final TipoRelacionInstitucionEntity DEFAULT_OBJECT = new TipoRelacionInstitucionEntity();
 	private UUID identificador;
@@ -22,7 +22,8 @@ public class TipoRelacionInstitucionEntity {
 		setEstado(EstadoTipoRelacionInstitucionEntity.getDefaultObject());
 	}
 	
-	public TipoRelacionInstitucionEntity(UUID identificador, String nombre, String descripcion, EstadoTipoRelacionInstitucionEntity estado) {
+	public TipoRelacionInstitucionEntity(UUID identificador, String nombre, String descripcion,
+			EstadoTipoRelacionInstitucionEntity estado) {
 		super();
 		setIdentificador(identificador);
 		setNombre(nombre);
@@ -34,7 +35,7 @@ public class TipoRelacionInstitucionEntity {
 		return DEFAULT_OBJECT;
 	}
 	
-	
+	//Setter y Getter
 	public final UUID getIdentificador() {
 		return identificador;
 	}

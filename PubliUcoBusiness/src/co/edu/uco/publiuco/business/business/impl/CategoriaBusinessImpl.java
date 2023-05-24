@@ -27,9 +27,10 @@ public class CategoriaBusinessImpl implements CategoriaBusiness {
 	public List<CategoriaDomain> list(CategoriaDomain domain) {
 		final CategoriaEntity entity = CategoriaAssembler.getInstance().toEntityFromDomain(domain);
 
-		final List<CategoriaEntity> result = daoFactory.getCategoriaDAO().read(entity);
+		List<CategoriaEntity> resultEntityList = daoFactory.getCategoriaDAO()
+				.read(entity);
 
-		return null;
+		return CategoriaAssembler.getInstance().toDomainListFromEntityList(resultEntityList);
 	}
 
 	@Override

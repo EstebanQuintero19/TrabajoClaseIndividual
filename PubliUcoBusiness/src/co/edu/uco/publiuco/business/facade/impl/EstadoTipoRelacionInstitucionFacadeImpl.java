@@ -5,10 +5,10 @@ import java.util.List;
 import co.edu.uco.publiuco.business.assembler.concrete.EstadoTipoRelacionInstitucionAssembler;
 import co.edu.uco.publiuco.business.business.EstadoTipoRelacionInstitucionBusiness;
 import co.edu.uco.publiuco.business.business.impl.EstadoTipoRelacionInstitucionBusinessImpl;
-import co.edu.uco.publiuco.business.domain.EstadoTipoRelacionInstitucionDomain;
 import co.edu.uco.publiuco.business.facade.EstadoTipoRelacionInstitucionFacade;
 import co.edu.uco.publiuco.crosscutting.exception.PubliucoBusinessException;
 import co.edu.uco.publiuco.crosscutting.exception.PubliucoException;
+import co.edu.uco.publiuco.crosscutting.utils.Messages.EstadoTipoRelacionInstitucionFacadeImplMessages;
 import co.edu.uco.publiuco.data.dao.factory.DAOFactory;
 import co.edu.uco.publiuco.data.dao.factory.Factory;
 import co.edu.uco.publiuco.dto.EstadoTipoRelacionInstitucionDTO;
@@ -19,7 +19,7 @@ public final class EstadoTipoRelacionInstitucionFacadeImpl implements EstadoTipo
 	private final EstadoTipoRelacionInstitucionBusiness business;
 
 	public EstadoTipoRelacionInstitucionFacadeImpl() {
-		daoFactory = DAOFactory.getFactory(Factory.SQLSERVER);
+		daoFactory = DAOFactory.getFactory(Factory.POSTGRESQL);
 		business = new EstadoTipoRelacionInstitucionBusinessImpl(daoFactory);
 	}
 
@@ -27,8 +27,7 @@ public final class EstadoTipoRelacionInstitucionFacadeImpl implements EstadoTipo
 	public void register(EstadoTipoRelacionInstitucionDTO dto) {
 		try {
 
-			final EstadoTipoRelacionInstitucionDomain domain = EstadoTipoRelacionInstitucionAssembler.getInstance()
-					.toDomainFromDto(dto);
+			final var domain = EstadoTipoRelacionInstitucionAssembler.getInstance().toDomainFromDto(dto);
 
 			daoFactory.initTransaction();
 			business.register(domain);
@@ -39,26 +38,34 @@ public final class EstadoTipoRelacionInstitucionFacadeImpl implements EstadoTipo
 		} catch (Exception exception) {
 			daoFactory.cancelTransaction();
 
-			var userMessage = "Se ha presentado un problema tratando de registrar la informacion del nuevo estado del tipo de relacion para una institucion. Por favor intente de nuevo y si el problema persiste comuniquese con el administrador de la aplicacion.";
-			var technicalMessage = "Se ha presentado una excepcion no conocido al momento de registrar un nuevo EstadoTipoRelacionInstitucion. Por favor valide la traza completa de la excepcion presentada...";
+			var userMessage = EstadoTipoRelacionInstitucionFacadeImplMessages.REGISTER_EXCEPTION_USER_MESSAGE;
+			var technicalMessage = EstadoTipoRelacionInstitucionFacadeImplMessages.REGISTER_EXCEPTION_TECHNICAL_MESSAGE;
 
 			throw PubliucoBusinessException.create(technicalMessage, userMessage, exception);
 		} finally {
-			daoFactory.cerrarConexion();
+			daoFactory.closeConection();
 		}
 
 	}
 
 	@Override
-	public List<EstadoTipoRelacionInstitucionDTO> list(EstadoTipoRelacionInstitucionDTO dto) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	public final List<EstadoTipoRelacionInstitucionDTO> list(EstadoTipoRelacionInstitucionDTO dto) {
+		try {
+			final var domain = EstadoTipoRelacionInstitucionAssembler.getInstance().toDomainFromDto(dto);
+			final var returnDomainList = business.list(domain);
 
-	@Override
-	public List<EstadoTipoRelacionInstitucionDTO> list(EstadoTipoRelacionInstitucionFacade dto) {
-		// TODO Auto-generated method stub
-		return null;
+			return EstadoTipoRelacionInstitucionAssembler.getInstance().toDTOListFromDomainList(returnDomainList);
+		} catch (final PubliucoException exception) {
+			throw exception;
+		} catch (final Exception exception) {
+			var userMessage = EstadoTipoRelacionInstitucionFacadeImplMessages.LIST_EXCEPTION_USER_MESSAGE;
+			var technicalMessage = EstadoTipoRelacionInstitucionFacadeImplMessages.LIST_EXCEPTION_TECHNICAL_MESSAGE;
+
+			throw PubliucoBusinessException.create(technicalMessage, userMessage, exception);
+		} finally {
+			daoFactory.closeConection();
+		}
+
 	}
 
 }

@@ -27,9 +27,9 @@ public class CalificacionBusinessImpl implements CalificacionBusiness {
 	public List<CalificacionDomain> list(CalificacionDomain domain) {
 		final CalificacionEntity entity = CalificacionAssembler.getInstance().toEntityFromDomain(domain);
 
-		final List<CalificacionEntity> result = daoFactory.getCalificacionDAO().read(entity);
+		List<CalificacionEntity> resultEntityList = daoFactory.getCalificacionDAO().read(entity);
 
-		return null;
+		return CalificacionAssembler.getInstance().toDomainListFromEntityList(resultEntityList);
 	}
 
 	@Override

@@ -7,7 +7,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
 
-public class RevisorDomain {
+public final class RevisorDomain {
 	
 	private static final RevisorDomain DEFAULT_OBJECT = new RevisorDomain();
 	private UUID identificador;

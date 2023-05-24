@@ -6,7 +6,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class LectorDTO {
+public final class LectorDTO {
 	
 	private UUID identificador;
 	private TipoIdentificacionDTO tipoIdentificacion;
@@ -26,8 +26,8 @@ public class LectorDTO {
 	public LectorDTO() {
 		super();
 		setIdentificador(UtilUUID.DEFAULT_UUID);
-		setTipoIdentificacion(TipoIdentificacionDTO.create());;
-		setNumeroIdentificacion(UtilText.EMPTY);;
+		setTipoIdentificacion(TipoIdentificacionDTO.create());
+		setNumeroIdentificacion(UtilText.EMPTY);
 		setPrimerNombre(UtilText.EMPTY);
 		setSegundoNombre(UtilText.EMPTY);
 		setPrimerApellido(UtilText.EMPTY);

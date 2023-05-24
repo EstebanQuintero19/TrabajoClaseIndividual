@@ -5,7 +5,7 @@ import java.util.UUID;
 import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class SuscripcionCategoriaEntity {
+public final class SuscripcionCategoriaEntity {
 
 	private static final SuscripcionCategoriaEntity DEFAULT_OBJECT = new SuscripcionCategoriaEntity();
 	private UUID identificador;

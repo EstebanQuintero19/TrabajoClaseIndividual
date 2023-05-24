@@ -27,9 +27,9 @@ public class ReporteBusinessImpl implements ReporteBusiness {
 	public List<ReporteDomain> list(ReporteDomain domain) {
 		final ReporteEntity entity = ReporteAssembler.getInstance().toEntityFromDomain(domain);
 
-		final List<ReporteEntity> result = daoFactory.getReporteDAO().read(entity);
+		List<ReporteEntity> resultEntityList = daoFactory.getReporteDAO().read(entity);
 
-		return null;
+		return ReporteAssembler.getInstance().toDomainListFromEntityList(resultEntityList);
 	}
 
 	@Override

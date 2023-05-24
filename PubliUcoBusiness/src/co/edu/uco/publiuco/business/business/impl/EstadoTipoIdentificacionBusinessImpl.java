@@ -29,9 +29,10 @@ public class EstadoTipoIdentificacionBusinessImpl implements EstadoTipoIdentific
 		final EstadoTipoIdentificacionEntity entity = EstadoTipoIdentificacionAssembler.getInstance()
 				.toEntityFromDomain(domain);
 
-		final List<EstadoTipoIdentificacionEntity> result = daoFactory.getEstadoTipoIdentificacionDAO().read(entity);
+		List<EstadoTipoIdentificacionEntity> resultEntityList = daoFactory.getEstadoTipoIdentificacionDAO()
+				.read(entity);
 
-		return null;
+		return EstadoTipoIdentificacionAssembler.getInstance().toDomainListFromEntityList(resultEntityList);
 	}
 
 }

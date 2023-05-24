@@ -6,7 +6,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class TipoIdentificacionDTO {
+public final class TipoIdentificacionDTO {
 	
 	private UUID identificador;
 	private String nombre;
@@ -36,6 +36,7 @@ public class TipoIdentificacionDTO {
 		return new TipoIdentificacionDTO();
 	}
 	
+	//Setter y Getter
 	public final UUID getIdentificador() {
 		return identificador;
 	}

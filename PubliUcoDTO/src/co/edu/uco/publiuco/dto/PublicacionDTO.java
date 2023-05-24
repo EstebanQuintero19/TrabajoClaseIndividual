@@ -7,7 +7,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilDate;
 import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class PublicacionDTO {
+public final class PublicacionDTO {
 
 	private UUID identificador;
 	private CategoriaDTO categoria;

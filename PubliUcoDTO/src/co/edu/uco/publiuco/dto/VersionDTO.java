@@ -9,7 +9,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class VersionDTO {
+public final class VersionDTO {
 
 	private UUID identificador;
 	private PublicacionDTO publicacion;

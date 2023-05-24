@@ -7,7 +7,7 @@ import co.edu.uco.publiuco.business.domain.CalificacionDomain;
 import co.edu.uco.publiuco.dto.CalificacionDTO;
 import co.edu.uco.publiuco.entities.CalificacionEntity;
 
-public  class CalificacionAssembler implements Assembler<CalificacionDomain, CalificacionDTO, CalificacionEntity> {
+public class CalificacionAssembler implements Assembler<CalificacionDomain, CalificacionDTO, CalificacionEntity> {
 
 	private static final Assembler<CalificacionDomain, CalificacionDTO, CalificacionEntity> INSTANCE = new CalificacionAssembler();
 
@@ -52,9 +52,14 @@ public  class CalificacionAssembler implements Assembler<CalificacionDomain, Cal
 	}
 
 	@Override
-	public List<CalificacionDomain> toDomainListFromEntity(List<CalificacionEntity> entityList) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<CalificacionDomain> toDomainListFromEntityList(List<CalificacionEntity> entityList) {
+
+		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
+	}
+
+	@Override
+	public List<CalificacionDTO> toDTOListFromDomainList(List<CalificacionDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
 	}
 
 }

@@ -29,10 +29,10 @@ public class CategoriaAdministradorCategoriaBusinessImpl implements CategoriaAdm
 		final CategoriaAdministradorCategoriaEntity entity = CategoriaAdministradorCategoriaAssembler.getInstance()
 				.toEntityFromDomain(domain);
 
-		final List<CategoriaAdministradorCategoriaEntity> result = daoFactory.getCategoriaAdministradorCategoriaDAO()
-				.read(entity);
+		List<CategoriaAdministradorCategoriaEntity> resultEntityList = daoFactory
+				.getCategoriaAdministradorCategoriaDAO().read(entity);
 
-		return null;
+		return CategoriaAdministradorCategoriaAssembler.getInstance().toDomainListFromEntityList(resultEntityList);
 	}
 
 	@Override

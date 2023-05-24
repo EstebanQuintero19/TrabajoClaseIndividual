@@ -6,7 +6,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class EscritorEntity {
+public final class EscritorEntity {
 	
 	private static final EscritorEntity DEFAULT_OBJECT = new EscritorEntity();
 	private UUID identificador;

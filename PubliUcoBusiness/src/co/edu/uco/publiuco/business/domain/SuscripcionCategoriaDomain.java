@@ -5,7 +5,7 @@ import java.util.UUID;
 import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class SuscripcionCategoriaDomain {
+public final class SuscripcionCategoriaDomain {
 
 	private static final SuscripcionCategoriaDomain DEFAULT_OBJECT = new SuscripcionCategoriaDomain();
 	private UUID identificador;

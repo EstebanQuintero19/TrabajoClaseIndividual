@@ -9,7 +9,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
 
-public class PlanCategoriaDomain {
+public final class PlanCategoriaDomain {
 
 	private static final PlanCategoriaDomain DEFAULT_OBJECT = new PlanCategoriaDomain();
 	private UUID identificador;

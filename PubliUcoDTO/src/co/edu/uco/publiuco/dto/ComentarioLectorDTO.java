@@ -8,7 +8,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class ComentarioLectorDTO {
+public final class ComentarioLectorDTO {
 
 	private UUID identificador;
 	private LectorDTO lector;

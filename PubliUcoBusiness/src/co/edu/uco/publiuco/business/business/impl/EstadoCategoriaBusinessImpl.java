@@ -27,9 +27,9 @@ public class EstadoCategoriaBusinessImpl implements EstadoCategoriaBusiness {
 	public List<EstadoCategoriaDomain> list(EstadoCategoriaDomain domain) {
 		final EstadoCategoriaEntity entity = EstadoCategoriaAssembler.getInstance().toEntityFromDomain(domain);
 
-		final List<EstadoCategoriaEntity> result = daoFactory.getEstadoCategoriaDAO().read(entity);
+		List<EstadoCategoriaEntity> resultEntityList = daoFactory.getEstadoCategoriaDAO().read(entity);
 
-		return null;
+		return EstadoCategoriaAssembler.getInstance().toDomainListFromEntityList(resultEntityList);
 	}
 
 }

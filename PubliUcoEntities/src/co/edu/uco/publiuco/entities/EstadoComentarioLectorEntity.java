@@ -5,7 +5,7 @@ import java.util.UUID;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class EstadoComentarioLectorEntity {
+public final class EstadoComentarioLectorEntity {
 	
 	private static final EstadoComentarioLectorEntity DEFAULT_OBJECT = new EstadoComentarioLectorEntity();
 	private UUID identificador;
@@ -19,7 +19,8 @@ public class EstadoComentarioLectorEntity {
 		setDescripcion(UtilText.getUtilText().getDefaultValue());
 	}
 
-	public EstadoComentarioLectorEntity(final UUID identificador, final String nombre, final String descripcion) {
+	public EstadoComentarioLectorEntity(final UUID identificador, final String nombre,
+			final String descripcion) {
 		super();
 		setIdentificador(identificador);
 		setNombre(nombre);

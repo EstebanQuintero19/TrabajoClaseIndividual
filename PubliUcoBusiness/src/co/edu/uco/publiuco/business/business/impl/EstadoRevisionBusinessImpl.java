@@ -27,9 +27,9 @@ public class EstadoRevisionBusinessImpl implements EstadoRevisionBusiness {
 	public List<EstadoRevisionDomain> list(EstadoRevisionDomain domain) {
 		final EstadoRevisionEntity entity = EstadoRevisionAssembler.getInstance().toEntityFromDomain(domain);
 
-		final List<EstadoRevisionEntity> result = daoFactory.getEstadoRevisionDAO().read(entity);
+		List<EstadoRevisionEntity> resultEntityList = daoFactory.getEstadoRevisionDAO().read(entity);
 
-		return null;
+		return EstadoRevisionAssembler.getInstance().toDomainListFromEntityList(resultEntityList);
 	}
 
 }

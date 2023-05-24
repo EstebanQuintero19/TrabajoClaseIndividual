@@ -9,7 +9,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class VersionDomain {
+public final class VersionDomain {
 
 	private static final VersionDomain DEFAULT_OBJECT = new VersionDomain();
 	private UUID identificador;

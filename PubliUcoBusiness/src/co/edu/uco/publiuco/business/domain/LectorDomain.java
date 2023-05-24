@@ -6,7 +6,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class LectorDomain {
+public final class LectorDomain {
 
 	private static final LectorDomain DEFAULT_OBJECT = new LectorDomain();
 	private UUID identificador;

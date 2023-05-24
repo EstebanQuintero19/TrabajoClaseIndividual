@@ -54,45 +54,14 @@ public class ComentarioRevisorAssembler
 	}
 
 	@Override
-	public co.edu.uco.publiuco.business.assembler.concrete.ComentarioRevisorDTO toDTOFromDomain(
-			co.edu.uco.publiuco.business.assembler.concrete.ComentarioRevisorDomain domian) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<ComentarioRevisorDomain> toDomainListFromEntityList(List<ComentarioRevisorEntity> entityList) {
+
+		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 
 	@Override
-	public co.edu.uco.publiuco.business.assembler.concrete.ComentarioRevisorDomain toDomainFromDto(
-			co.edu.uco.publiuco.business.assembler.concrete.ComentarioRevisorDTO dto) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public ComentarioRevisorEntity toEntityFromDomain(
-			co.edu.uco.publiuco.business.assembler.concrete.ComentarioRevisorDomain domain) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<co.edu.uco.publiuco.business.assembler.concrete.ComentarioRevisorDomain> toDomainListFromEntity(
-			List<ComentarioRevisorEntity> entityList) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public ComentarioRevisorDTO toDTOFromDomain(
-			co.edu.uco.publiuco.business.assembler.concrete.ComentarioRevisorDomain domian) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public ComentarioRevisorEntity toEntityFromDomain(
-			co.edu.uco.publiuco.business.assembler.concrete.ComentarioRevisorDomain domain) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<ComentarioRevisorDTO> toDTOListFromDomainList(List<ComentarioRevisorDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
 	}
 
 }

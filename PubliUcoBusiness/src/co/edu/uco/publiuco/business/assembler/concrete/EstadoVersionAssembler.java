@@ -41,9 +41,14 @@ public class EstadoVersionAssembler implements Assembler<EstadoVersionDomain, Es
 	}
 
 	@Override
-	public List<EstadoVersionDomain> toDomainListFromEntity(List<EstadoVersionEntity> entityList) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<EstadoVersionDomain> toDomainListFromEntityList(List<EstadoVersionEntity> entityList) {
+
+		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
+	}
+
+	@Override
+	public List<EstadoVersionDTO> toDTOListFromDomainList(List<EstadoVersionDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
 	}
 
 }

@@ -27,9 +27,9 @@ public class EstadoSuscripcionBusinessImpl implements EstadoSuscripcionBusiness 
 	public List<EstadoSuscripcionDomain> list(EstadoSuscripcionDomain domain) {
 		final EstadoSuscripcionEntity entity = EstadoSuscripcionAssembler.getInstance().toEntityFromDomain(domain);
 
-		final List<EstadoSuscripcionEntity> result = daoFactory.getEstadoSuscripcionDAO().read(entity);
+		List<EstadoSuscripcionEntity> resultEntityList = daoFactory.getEstadoSuscripcionDAO().read(entity);
 
-		return null;
+		return EstadoSuscripcionAssembler.getInstance().toDomainListFromEntityList(resultEntityList);
 	}
 
 }

@@ -8,7 +8,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilNumber;
 import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class CalificacionDomain {
+public final class CalificacionDomain {
 	
 	private static final CalificacionDomain DEFAULT_OBJECT = new CalificacionDomain();
 	private UUID identificador;

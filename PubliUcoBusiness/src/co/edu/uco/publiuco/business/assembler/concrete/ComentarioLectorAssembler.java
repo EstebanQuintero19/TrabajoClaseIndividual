@@ -62,9 +62,14 @@ public class ComentarioLectorAssembler
 	}
 
 	@Override
-	public List<ComentarioLectorDomain> toDomainListFromEntity(List<ComentarioLectorEntity> entityList) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<ComentarioLectorDomain> toDomainListFromEntityList(List<ComentarioLectorEntity> entityList) {
+
+		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
+	}
+
+	@Override
+	public List<ComentarioLectorDTO> toDTOListFromDomainList(List<ComentarioLectorDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
 	}
 
 }

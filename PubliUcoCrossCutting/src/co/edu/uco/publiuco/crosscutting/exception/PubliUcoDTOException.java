@@ -1,23 +1,23 @@
 package co.edu.uco.publiuco.crosscutting.exception;
 
-public final class PubliUcoDTOException extends PubliUcoException {
+public final class PubliucoDTOException extends PubliucoException {
 
-	private static final long serialVersionUID = -4636066115510646740L;
+	private static final long serialVersionUID = 6608364495373180730L;
 
-	private PubliUcoDTOException(String technicalMessage, String userMessage, Throwable rootCause) {
+	private PubliucoDTOException(String technicalMessage, String userMessage, Throwable rootCause) {
 		super(technicalMessage, userMessage, rootCause, ExceptionType.DTO);
 	}
 
-	public static PubliUcoDTOException create(final String technicalMessage, final String userMessage,
+	public static PubliucoDTOException create(final String technicalMessage, final String userMessage,
 			final Throwable rootCause) {
-		return new PubliUcoDTOException(technicalMessage, userMessage, rootCause);
+		return new PubliucoDTOException(technicalMessage, userMessage, rootCause);
 	}
 
-	public static PubliUcoDTOException create(final String userMessage) {
-		return new PubliUcoDTOException(userMessage, userMessage, new Exception());
+	public static PubliucoDTOException create(final String userMessage) {
+		return new PubliucoDTOException(userMessage, userMessage, new Exception());
 	}
 
-	public static PubliUcoDTOException create(final String technicalMessage, final String userMessage) {
-		return new PubliUcoDTOException(technicalMessage, userMessage, new Exception());
+	public static PubliucoDTOException create(final String technicalMessage, final String userMessage) {
+		return new PubliucoDTOException(technicalMessage, userMessage, new Exception());
 	}
 }

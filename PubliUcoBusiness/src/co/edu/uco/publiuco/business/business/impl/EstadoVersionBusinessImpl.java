@@ -27,9 +27,9 @@ public class EstadoVersionBusinessImpl implements EstadoVersionBusiness {
 	public List<EstadoVersionDomain> list(EstadoVersionDomain domain) {
 		final EstadoVersionEntity entity = EstadoVersionAssembler.getInstance().toEntityFromDomain(domain);
 
-		final List<EstadoVersionEntity> result = daoFactory.getEstadoVersionDAO().read(entity);
+		List<EstadoVersionEntity> resultEntityList = daoFactory.getEstadoVersionDAO().read(entity);
 
-		return null;
+		return EstadoVersionAssembler.getInstance().toDomainListFromEntityList(resultEntityList);
 	}
 
 }

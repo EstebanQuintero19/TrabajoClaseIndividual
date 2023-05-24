@@ -8,7 +8,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilNumber;
 import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class PlanCategoriaDTO {
+public final class PlanCategoriaDTO {
 
 	private UUID identificador;
 	private CategoriaDTO categoria;

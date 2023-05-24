@@ -27,9 +27,9 @@ public class RevisorBusinessImpl implements RevisorBusiness {
 	public List<RevisorDomain> list(RevisorDomain domain) {
 		final RevisorEntity entity = RevisorAssembler.getInstance().toEntityFromDomain(domain);
 
-		final List<RevisorEntity> result = daoFactory.getRevisorDAO().read(entity);
+		List<RevisorEntity> resultEntityList = daoFactory.getRevisorDAO().read(entity);
 
-		return null;
+		return RevisorAssembler.getInstance().toDomainListFromEntityList(resultEntityList);
 	}
 
 	@Override

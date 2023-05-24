@@ -8,7 +8,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilNumber;
 import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class PlanPublicacionEntity {
+public final class PlanPublicacionEntity {
 
 	private static final PlanPublicacionEntity DEFAULT_OBJECT = new PlanPublicacionEntity();
 	private UUID identificador;
@@ -26,7 +26,8 @@ public class PlanPublicacionEntity {
 		setFechaHasta(UtilDate.DEFAULT_DATE);
 	}
 
-	public PlanPublicacionEntity(UUID identificador, PublicacionEntity publicacion, int precio, LocalDate fechaDesde, LocalDate fechaHasta) {
+	public PlanPublicacionEntity(UUID identificador, PublicacionEntity publicacion, int precio, LocalDate fechaDesde,
+			LocalDate fechaHasta) {
 		super();
 		setIdentificador(identificador);
 		setPublicacion(publicacion);

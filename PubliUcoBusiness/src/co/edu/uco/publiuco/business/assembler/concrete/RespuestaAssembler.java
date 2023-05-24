@@ -41,9 +41,14 @@ public class RespuestaAssembler implements Assembler<RespuestaDomain, RespuestaD
 	}
 
 	@Override
-	public List<RespuestaDomain> toDomainListFromEntity(List<RespuestaEntity> entityList) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<RespuestaDomain> toDomainListFromEntityList(List<RespuestaEntity> entityList) {
+
+		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
+	}
+
+	@Override
+	public List<RespuestaDTO> toDTOListFromDomainList(List<RespuestaDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
 	}
 
 }

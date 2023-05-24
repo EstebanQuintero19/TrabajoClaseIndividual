@@ -6,7 +6,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class AdministradorCategoriaDTO {
+public final class AdministradorCategoriaDTO {
 
 	private UUID identificador;
 	private TipoIdentificacionDTO tipoIdentificacion;
@@ -26,8 +26,8 @@ public class AdministradorCategoriaDTO {
 	public AdministradorCategoriaDTO() {
 		super();
 		setIdentificador(UtilUUID.DEFAULT_UUID);
-		setTipoIdentificacion(TipoIdentificacionDTO.create());;
-		setNumeroIdentificacion(UtilText.EMPTY);;
+		setTipoIdentificacion(TipoIdentificacionDTO.create());
+		setNumeroIdentificacion(UtilText.EMPTY);
 		setPrimerNombre(UtilText.EMPTY);
 		setSegundoNombre(UtilText.EMPTY);
 		setPrimerApellido(UtilText.EMPTY);
@@ -48,8 +48,8 @@ public class AdministradorCategoriaDTO {
 			EstadoAdministradorCategoriaDTO estado) {
 		super();
 		setIdentificador(identificador);
-		setTipoIdentificacion(tipoIdentificacion);;
-		setNumeroIdentificacion(numeroIdentificacion);;
+		setTipoIdentificacion(tipoIdentificacion);
+		setNumeroIdentificacion(numeroIdentificacion);
 		setPrimerNombre(primerNombre);
 		setSegundoNombre(segundoNombre);
 		setPrimerApellido(primerApellido);

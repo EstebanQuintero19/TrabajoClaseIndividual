@@ -27,9 +27,9 @@ public class EstadoLectorBusinessImpl implements EstadoLectorBusiness {
 	public List<EstadoLectorDomain> list(EstadoLectorDomain domain) {
 		final EstadoLectorEntity entity = EstadoLectorAssembler.getInstance().toEntityFromDomain(domain);
 
-		final List<EstadoLectorEntity> result = daoFactory.getEstadoLectorDAO().read(entity);
+		List<EstadoLectorEntity> resultEntityList = daoFactory.getEstadoLectorDAO().read(entity);
 
-		return null;
+		return EstadoLectorAssembler.getInstance().toDomainListFromEntityList(resultEntityList);
 	}
 
 }

@@ -7,7 +7,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
 
-public class EscritorDomain {
+public final class EscritorDomain {
 	
 	private static final EscritorDomain DEFAULT_OBJECT = new EscritorDomain();
 	private UUID identificador;

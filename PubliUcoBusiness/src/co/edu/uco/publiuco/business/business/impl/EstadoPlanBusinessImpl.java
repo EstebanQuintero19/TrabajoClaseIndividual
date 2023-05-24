@@ -27,9 +27,9 @@ public class EstadoPlanBusinessImpl implements EstadoPlanBusiness {
 	public List<EstadoPlanDomain> list(EstadoPlanDomain domain) {
 		final EstadoPlanEntity entity = EstadoPlanAssembler.getInstance().toEntityFromDomain(domain);
 
-		final List<EstadoPlanEntity> result = daoFactory.getEstadoPlanDAO().read(entity);
+		List<EstadoPlanEntity> resultEntityList = daoFactory.getEstadoPlanDAO().read(entity);
 
-		return null;
+		return EstadoPlanAssembler.getInstance().toDomainListFromEntityList(resultEntityList);
 	}
 
 }

@@ -49,9 +49,14 @@ public class PreferenciaCategoriaAssembler
 	}
 
 	@Override
-	public List<PreferenciaCategoriaDomain> toDomainListFromEntity(List<PreferenciaCategoriaEntity> entityList) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<PreferenciaCategoriaDomain> toDomainListFromEntityList(List<PreferenciaCategoriaEntity> entityList) {
+
+		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
+	}
+
+	@Override
+	public List<PreferenciaCategoriaDTO> toDTOListFromDomainList(List<PreferenciaCategoriaDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
 	}
 
 }

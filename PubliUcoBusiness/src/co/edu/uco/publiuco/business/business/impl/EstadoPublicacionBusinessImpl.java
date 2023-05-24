@@ -3,12 +3,16 @@ package co.edu.uco.publiuco.business.business.impl;
 import java.util.List;
 
 import co.edu.uco.publiuco.business.assembler.concrete.EscritorPublicacionAssembler;
+import co.edu.uco.publiuco.business.assembler.concrete.EstadoPublicacionAssembler;
 import co.edu.uco.publiuco.business.business.EscritorPublicacionBusiness;
+import co.edu.uco.publiuco.business.business.EstadoPublicacionBusiness;
 import co.edu.uco.publiuco.business.domain.EscritorPublicacionDomain;
+import co.edu.uco.publiuco.business.domain.EstadoPublicacionDomain;
 import co.edu.uco.publiuco.data.dao.factory.DAOFactory;
 import co.edu.uco.publiuco.entities.EscritorPublicacionEntity;
+import co.edu.uco.publiuco.entities.EstadoPublicacionEntity;
 
-public class EstadoPublicacionBusinessImpl implements EscritorPublicacionBusiness {
+public class EstadoPublicacionBusinessImpl implements EstadoPublicacionBusiness {
 
 	DAOFactory daoFactory;
 
@@ -17,33 +21,19 @@ public class EstadoPublicacionBusinessImpl implements EscritorPublicacionBusines
 	}
 
 	@Override
-	public void register(EscritorPublicacionDomain domain) {
-		final EscritorPublicacionEntity entity = EscritorPublicacionAssembler.getInstance().toEntityFromDomain(domain);
-		daoFactory.getEscritorPublicacionDAO().create(entity);
+	public void register(EstadoPublicacionDomain domain) {
+		final EstadoPublicacionEntity entity = EstadoPublicacionAssembler.getInstance().toEntityFromDomain(domain);
+		daoFactory.getEstadoPublicacionDAO().create(entity);
 
 	}
 
 	@Override
-	public List<EscritorPublicacionDomain> list(EscritorPublicacionDomain domain) {
-		final EscritorPublicacionEntity entity = EscritorPublicacionAssembler.getInstance().toEntityFromDomain(domain);
+	public List<EstadoPublicacionDomain> list(EstadoPublicacionDomain domain) {
+		final EstadoPublicacionEntity entity = EstadoPublicacionAssembler.getInstance().toEntityFromDomain(domain);
 
-		final List<EscritorPublicacionEntity> result = daoFactory.getEscritorPublicacionDAO().read(entity);
+		List<EstadoPublicacionEntity> resultEntityList = daoFactory.getEstadoPublicacionDAO().read(entity);
 
-		return null;
-	}
-
-	@Override
-	public void modify(EscritorPublicacionDomain domain) {
-		final EscritorPublicacionEntity entity = EscritorPublicacionAssembler.getInstance().toEntityFromDomain(domain);
-		daoFactory.getEscritorPublicacionDAO().update(entity);
-
-	}
-
-	@Override
-	public void drop(EscritorPublicacionDomain domain) {
-		final EscritorPublicacionEntity entity = EscritorPublicacionAssembler.getInstance().toEntityFromDomain(domain);
-		daoFactory.getEscritorPublicacionDAO().delete(entity);
-
+		return EstadoPublicacionAssembler.getInstance().toDomainListFromEntityList(resultEntityList);
 	}
 
 }

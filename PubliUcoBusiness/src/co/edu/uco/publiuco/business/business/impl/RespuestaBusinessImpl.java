@@ -27,9 +27,9 @@ public class RespuestaBusinessImpl implements RespuestaBusiness {
 	public List<RespuestaDomain> list(RespuestaDomain domain) {
 		final RespuestaEntity entity = RespuestaAssembler.getInstance().toEntityFromDomain(domain);
 
-		final List<RespuestaEntity> result = daoFactory.getRespuestaDAO().read(entity);
+		List<RespuestaEntity> resultEntityList = daoFactory.getRespuestaDAO().read(entity);
 
-		return null;
+		return RespuestaAssembler.getInstance().toDomainListFromEntityList(resultEntityList);
 	}
 
 }

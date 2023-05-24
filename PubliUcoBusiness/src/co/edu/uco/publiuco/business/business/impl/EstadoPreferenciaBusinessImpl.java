@@ -27,9 +27,9 @@ public class EstadoPreferenciaBusinessImpl implements EstadoPreferenciaBusiness 
 	public List<EstadoPreferenciaDomain> list(EstadoPreferenciaDomain domain) {
 		final EstadoPreferenciaEntity entity = EstadoPreferenciaAssembler.getInstance().toEntityFromDomain(domain);
 
-		final List<EstadoPreferenciaEntity> result = daoFactory.getEstadoPreferenciaDAO().read(entity);
+		List<EstadoPreferenciaEntity> resultEntityList = daoFactory.getEstadoPreferenciaDAO().read(entity);
 
-		return null;
+		return EstadoPreferenciaAssembler.getInstance().toDomainListFromEntityList(resultEntityList);
 	}
 
 }

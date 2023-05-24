@@ -48,8 +48,13 @@ public class PreferenciaEscritorAssembler
 	}
 
 	@Override
-	public List<PreferenciaEscritorDomain> toDomainListFromEntity(List<PreferenciaEscritorEntity> entityList) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<PreferenciaEscritorDomain> toDomainListFromEntityList(List<PreferenciaEscritorEntity> entityList) {
+
+		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
+	}
+
+	@Override
+	public List<PreferenciaEscritorDTO> toDTOListFromDomainList(List<PreferenciaEscritorDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
 	}
 }

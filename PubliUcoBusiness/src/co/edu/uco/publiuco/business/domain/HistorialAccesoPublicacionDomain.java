@@ -7,7 +7,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilDate;
 import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class HistorialAccesoPublicacionDomain {
+public final class HistorialAccesoPublicacionDomain {
 
 	private static final HistorialAccesoPublicacionDomain DEFAULT_OBJECT = new HistorialAccesoPublicacionDomain();
 	private UUID identificador;

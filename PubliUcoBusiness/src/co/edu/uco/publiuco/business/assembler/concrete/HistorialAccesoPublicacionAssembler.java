@@ -50,10 +50,16 @@ public class HistorialAccesoPublicacionAssembler implements
 	}
 
 	@Override
-	public List<HistorialAccesoPublicacionDomain> toDomainListFromEntity(
+	public List<HistorialAccesoPublicacionDomain> toDomainListFromEntityList(
 			List<HistorialAccesoPublicacionEntity> entityList) {
-		// TODO Auto-generated method stub
-		return null;
+
+		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
+	}
+
+	@Override
+	public List<HistorialAccesoPublicacionDTO> toDTOListFromDomainList(
+			List<HistorialAccesoPublicacionDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
 	}
 
 }

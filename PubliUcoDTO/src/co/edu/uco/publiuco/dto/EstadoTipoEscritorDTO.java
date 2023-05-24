@@ -5,7 +5,7 @@ import java.util.UUID;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class EstadoTipoEscritorDTO {
+public final class EstadoTipoEscritorDTO {
 	
 	private UUID identificador;
 	private String nombre;

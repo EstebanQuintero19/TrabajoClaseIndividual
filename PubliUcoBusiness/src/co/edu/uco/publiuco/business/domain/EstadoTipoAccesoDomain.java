@@ -5,7 +5,7 @@ import java.util.UUID;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class EstadoTipoAccesoDomain {
+public final class EstadoTipoAccesoDomain {
 	
 	private static final EstadoTipoAccesoDomain DEFAULT_OBJECT = new EstadoTipoAccesoDomain();
 	private UUID identificador;

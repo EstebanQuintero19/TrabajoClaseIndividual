@@ -48,9 +48,15 @@ public class PalabraClavePublicacionAssembler
 	}
 
 	@Override
-	public List<PalabraClavePublicacionDomain> toDomainListFromEntity(List<PalabraClavePublicacionEntity> entityList) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<PalabraClavePublicacionDomain> toDomainListFromEntityList(
+			List<PalabraClavePublicacionEntity> entityList) {
+
+		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
+	}
+
+	@Override
+	public List<PalabraClavePublicacionDTO> toDTOListFromDomainList(List<PalabraClavePublicacionDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
 	}
 
 }

@@ -1,4 +1,4 @@
-co.edu.uco.publiuco.business.business.impl;
+package co.edu.uco.publiuco.business.business.impl;
 
 import java.util.List;
 
@@ -29,10 +29,10 @@ public class EstadoAdministradorCategoriaBusinessImpl implements EstadoAdministr
 		final EstadoAdministradorCategoriaEntity entity = EstadoAdministradorCategoriaAssembler.getInstance()
 				.toEntityFromDomain(domain);
 
-		final List<EstadoAdministradorCategoriaEntity> result = daoFactory.getEstadoAdministradorCategoriaDAO()
+		List<EstadoAdministradorCategoriaEntity> resultEntityList = daoFactory.getEstadoAdministradorCategoriaDAO()
 				.read(entity);
 
-		return null;
+		return EstadoAdministradorCategoriaAssembler.getInstance().toDomainListFromEntityList(resultEntityList);
 	}
 
 }

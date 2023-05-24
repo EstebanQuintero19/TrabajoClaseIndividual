@@ -6,7 +6,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class TipoAccesoEntity {
+public final class TipoAccesoEntity {
 
 	private static final TipoAccesoEntity DEFAULT_OBJECT = new TipoAccesoEntity();
 	private UUID identificador;

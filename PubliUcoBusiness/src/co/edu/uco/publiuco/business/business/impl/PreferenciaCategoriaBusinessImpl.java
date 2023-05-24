@@ -29,9 +29,9 @@ public class PreferenciaCategoriaBusinessImpl implements PreferenciaCategoriaBus
 		final PreferenciaCategoriaEntity entity = PreferenciaCategoriaAssembler.getInstance()
 				.toEntityFromDomain(domain);
 
-		final List<PreferenciaCategoriaEntity> result = daoFactory.getPreferenciaCategoriaDAO().read(entity);
+		List<PreferenciaCategoriaEntity> resultEntityList = daoFactory.getPreferenciaCategoriaDAO().read(entity);
 
-		return null;
+		return PreferenciaCategoriaAssembler.getInstance().toDomainListFromEntityList(resultEntityList);
 	}
 
 	@Override

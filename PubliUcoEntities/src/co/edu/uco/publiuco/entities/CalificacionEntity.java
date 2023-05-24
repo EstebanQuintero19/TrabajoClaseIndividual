@@ -8,7 +8,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilNumber;
 import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class CalificacionEntity {
+public final class CalificacionEntity {
 	
 	private static final CalificacionEntity DEFAULT_OBJECT = new CalificacionEntity();
 	private UUID identificador;
@@ -26,7 +26,8 @@ public class CalificacionEntity {
 		setCalificacion(UtilNumber.ZERO);
 	}
 
-	public CalificacionEntity(UUID identificador, LectorEntity lector, PublicacionEntity publicacion, LocalDate fechaCalificacion, int calificacion) {
+	public CalificacionEntity(UUID identificador, LectorEntity lector, PublicacionEntity publicacion,
+			LocalDate fechaCalificacion, int calificacion) {
 		super();
 		setIdentificador(identificador);
 		setLector(lector);

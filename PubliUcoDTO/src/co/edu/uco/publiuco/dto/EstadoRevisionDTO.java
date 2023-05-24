@@ -7,7 +7,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
 
-public class EstadoRevisionDTO {
+public final class EstadoRevisionDTO {
 	
 	private UUID identificador;
 	private String nombre;

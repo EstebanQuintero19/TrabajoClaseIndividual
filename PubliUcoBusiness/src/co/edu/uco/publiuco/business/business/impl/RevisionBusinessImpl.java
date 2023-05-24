@@ -27,9 +27,9 @@ public class RevisionBusinessImpl implements RevisionBusiness {
 	public List<RevisionDomain> list(RevisionDomain domain) {
 		final RevisionEntity entity = RevisionAssembler.getInstance().toEntityFromDomain(domain);
 
-		final List<RevisionEntity> result = daoFactory.getRevisionDAO().read(entity);
+		List<RevisionEntity> resultEntityList = daoFactory.getRevisionDAO().read(entity);
 
-		return null;
+		return RevisionAssembler.getInstance().toDomainListFromEntityList(resultEntityList);
 	}
 
 	@Override

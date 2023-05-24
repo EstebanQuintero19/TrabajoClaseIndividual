@@ -27,9 +27,9 @@ public class TipoIdentificacionBusinessImpl implements TipoIdentificacionBusines
 	public List<TipoIdentificacionDomain> list(TipoIdentificacionDomain domain) {
 		final TipoIdentificacionEntity entity = TipoIdentificacionAssembler.getInstance().toEntityFromDomain(domain);
 
-		final List<TipoIdentificacionEntity> result = daoFactory.getTipoIdentificacionDAO().read(entity);
+		List<TipoIdentificacionEntity> resultEntityList = daoFactory.getTipoIdentificacionDAO().read(entity);
 
-		return null;
+		return TipoIdentificacionAssembler.getInstance().toDomainListFromEntityList(resultEntityList);
 	}
 
 	@Override

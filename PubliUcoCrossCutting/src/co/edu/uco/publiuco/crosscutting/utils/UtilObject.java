@@ -10,5 +10,3 @@ public interface UtilObject {
 		return isNull(object) ? defaultValue : object;
 	}
 }
-
-//singleton interfaz con métodos estáticos.

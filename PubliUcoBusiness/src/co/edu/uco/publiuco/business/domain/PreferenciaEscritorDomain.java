@@ -5,7 +5,7 @@ import java.util.UUID;
 import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class PreferenciaEscritorDomain {
+public final class PreferenciaEscritorDomain {
 
 	private static final PreferenciaEscritorDomain DEFAULT_OBJECT = new PreferenciaEscritorDomain();
 	private UUID identificador;

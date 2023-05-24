@@ -5,7 +5,7 @@ import java.util.UUID;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class TipoRevisionEntity {
+public final class TipoRevisionEntity {
 	
 	private static final TipoRevisionEntity DEFAULT_OBJECT = new TipoRevisionEntity();
 	private UUID identificador;
@@ -19,7 +19,8 @@ public class TipoRevisionEntity {
 		setDescripcion(UtilText.getUtilText().getDefaultValue());
 	}
 
-	public TipoRevisionEntity(final UUID identificador, final String nombre, final String descripcion) {
+	public TipoRevisionEntity(final UUID identificador, final String nombre,
+			final String descripcion) {
 		super();
 		setIdentificador(identificador);
 		setNombre(nombre);

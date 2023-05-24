@@ -29,9 +29,9 @@ public class EstadoComentarioLectorBusinessImpl implements EstadoComentarioLecto
 		final EstadoComentarioLectorEntity entity = EstadoComentarioLectorAssembler.getInstance()
 				.toEntityFromDomain(domain);
 
-		final List<EstadoComentarioLectorEntity> result = daoFactory.getEstadoComentarioLectorDAO().read(entity);
+		List<EstadoComentarioLectorEntity> resultEntityList = daoFactory.getEstadoComentarioLectorDAO().read(entity);
 
-		return null;
+		return EstadoComentarioLectorAssembler.getInstance().toDomainListFromEntityList(resultEntityList);
 	}
 
 }

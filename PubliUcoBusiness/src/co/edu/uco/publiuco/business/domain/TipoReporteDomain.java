@@ -5,7 +5,7 @@ import java.util.UUID;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class TipoReporteDomain {
+public final class TipoReporteDomain {
 	
 	private static final TipoReporteDomain DEFAULT_OBJECT = new TipoReporteDomain();
 	private UUID identificador;

@@ -1,5 +1,7 @@
 package co.edu.uco.publiuco.business.assembler.concrete;
 
+import java.util.List;
+
 import co.edu.uco.publiuco.business.assembler.Assembler;
 import co.edu.uco.publiuco.business.domain.VersionDomain;
 import co.edu.uco.publiuco.dto.VersionDTO;
@@ -41,18 +43,31 @@ public class VersionAssembler implements Assembler<VersionDomain, VersionDTO, Ve
 	public VersionEntity toEntityFromDomain(final VersionDomain domain) {
 		return new VersionEntity(domain.getIdentificador(),
 				PublicacionAssembler.getInstance().toEntityFromDomain(domain.getPublicacion()),
-				VersionAssembler.getInstance().toEntityFromDomain(domain.getVersionAnterior()), domain.getNumeroVersion(),
-				domain.getFechaCreacion(), domain.getFechaUltimaModificacion(), domain.getTitulo(), domain.getResumen(),
-				domain.getCuerpo(), EstadoPublicacionAssembler.getInstance().toEntityFromDomain(domain.getEstado()));
+				VersionAssembler.getInstance().toEntityFromDomain(domain.getVersionAnterior()),
+				domain.getNumeroVersion(), domain.getFechaCreacion(), domain.getFechaUltimaModificacion(),
+				domain.getTitulo(), domain.getResumen(), domain.getCuerpo(),
+				EstadoPublicacionAssembler.getInstance().toEntityFromDomain(domain.getEstado()));
 	}
 
 	@Override
 	public VersionDomain toDomainFromEntity(final VersionEntity entity) {
 		return new VersionDomain(entity.getIdentificador(),
 				PublicacionAssembler.getInstance().toDomainFromEntity(entity.getPublicacion()),
-				VersionAssembler.getInstance().toDomainFromEntity(entity.getVersionAnterior()), entity.getNumeroVersion(),
-				entity.getFechaCreacion(), entity.getFechaUltimaModificacion(), entity.getTitulo(), entity.getResumen(),
-				entity.getCuerpo(), EstadoPublicacionAssembler.getInstance().toDomainFromEntity(entity.getEstado()));
+				VersionAssembler.getInstance().toDomainFromEntity(entity.getVersionAnterior()),
+				entity.getNumeroVersion(), entity.getFechaCreacion(), entity.getFechaUltimaModificacion(),
+				entity.getTitulo(), entity.getResumen(), entity.getCuerpo(),
+				EstadoPublicacionAssembler.getInstance().toDomainFromEntity(entity.getEstado()));
+	}
+
+	@Override
+	public List<VersionDomain> toDomainListFromEntityList(List<VersionEntity> entityList) {
+
+		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
+	}
+
+	@Override
+	public List<VersionDTO> toDTOListFromDomainList(List<VersionDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
 	}
 
 }

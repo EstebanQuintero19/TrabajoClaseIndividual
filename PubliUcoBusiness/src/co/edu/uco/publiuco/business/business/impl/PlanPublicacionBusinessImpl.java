@@ -27,9 +27,9 @@ public class PlanPublicacionBusinessImpl implements PlanPublicacionBusiness {
 	public List<PlanPublicacionDomain> list(PlanPublicacionDomain domain) {
 		final PlanPublicacionEntity entity = PlanPublicacionAssembler.getInstance().toEntityFromDomain(domain);
 
-		final List<PlanPublicacionEntity> result = daoFactory.getPlanPublicacionDAO().read(entity);
+		List<PlanPublicacionEntity> resultEntityList = daoFactory.getPlanPublicacionDAO().read(entity);
 
-		return null;
+		return PlanPublicacionAssembler.getInstance().toDomainListFromEntityList(resultEntityList);
 	}
 
 	@Override

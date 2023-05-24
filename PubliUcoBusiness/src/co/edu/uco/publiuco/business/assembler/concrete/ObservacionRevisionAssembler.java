@@ -63,16 +63,14 @@ public class ObservacionRevisionAssembler
 	}
 
 	@Override
-	public ObservacionRevisionDomain toDomainFromDto(
-			co.edu.uco.publiuco.business.assembler.concrete.ObservacionRevisionDTO dto) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<ObservacionRevisionDomain> toDomainListFromEntityList(List<ObservacionRevisionEntity> entityList) {
+
+		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 
 	@Override
-	public List<ObservacionRevisionDomain> toDomainListFromEntity(List<ObservacionRevisionEntity> entityList) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<ObservacionRevisionDTO> toDTOListFromDomainList(List<ObservacionRevisionDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
 	}
 
 }

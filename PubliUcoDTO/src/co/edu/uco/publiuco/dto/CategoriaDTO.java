@@ -6,7 +6,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class CategoriaDTO {
+public final class CategoriaDTO {
 
 	private UUID identificador;
 	private CategoriaDTO categoriaPadre;

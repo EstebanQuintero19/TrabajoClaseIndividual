@@ -5,7 +5,7 @@ import java.util.UUID;
 import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class PreferenciaEscritorDTO {
+public final class PreferenciaEscritorDTO {
 
 	private UUID identificador;
 	private PerfilDTO perfil;

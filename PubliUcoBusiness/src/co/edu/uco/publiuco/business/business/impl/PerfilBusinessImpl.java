@@ -27,9 +27,9 @@ public class PerfilBusinessImpl implements PerfilBusiness {
 	public List<PerfilDomain> list(PerfilDomain domain) {
 		final PerfilEntity entity = PerfilAssembler.getInstance().toEntityFromDomain(domain);
 
-		final List<PerfilEntity> result = daoFactory.getPerfilDAO().read(entity);
+		List<PerfilEntity> resultEntityList = daoFactory.getPerfilDAO().read(entity);
 
-		return null;
+		return PerfilAssembler.getInstance().toDomainListFromEntityList(resultEntityList);
 	}
 
 	@Override

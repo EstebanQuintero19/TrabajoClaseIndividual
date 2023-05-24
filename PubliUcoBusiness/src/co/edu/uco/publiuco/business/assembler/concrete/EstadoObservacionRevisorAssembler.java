@@ -44,8 +44,14 @@ public class EstadoObservacionRevisorAssembler implements
 	}
 
 	@Override
-	public List<EstadoObservacionRevisorDomain> toDomainListFromEntity(
+	public List<EstadoObservacionRevisorDomain> toDomainListFromEntityList(
 			List<EstadoObservacionRevisorEntity> entityList) {
+
+		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
+	}
+
+	@Override
+	public List<EstadoObservacionRevisorDTO> toDTOListFromDomainList(List<EstadoObservacionRevisorDomain> domainList) {
 		// TODO Auto-generated method stub
 		return null;
 	}

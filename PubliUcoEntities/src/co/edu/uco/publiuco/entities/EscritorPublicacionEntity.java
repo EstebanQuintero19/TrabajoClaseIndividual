@@ -5,7 +5,7 @@ import java.util.UUID;
 import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class EscritorPublicacionEntity {
+public final class EscritorPublicacionEntity {
 	
 	private static final EscritorPublicacionEntity DEFAULT_OBJECT = new EscritorPublicacionEntity();
 	private UUID identificador;

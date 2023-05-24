@@ -6,7 +6,7 @@ import java.util.UUID;
 import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class PerfilEntity {
+public final class PerfilEntity {
 
 	private static final PerfilEntity DEFAULT_OBJECT = new PerfilEntity();
 	private UUID identificador;

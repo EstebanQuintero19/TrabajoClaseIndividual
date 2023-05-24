@@ -27,9 +27,9 @@ public class TipoRevisionBusinessImpl implements TipoRevisionBusiness {
 	public List<TipoRevisionDomain> list(TipoRevisionDomain domain) {
 		final TipoRevisionEntity entity = TipoRevisionAssembler.getInstance().toEntityFromDomain(domain);
 
-		final List<TipoRevisionEntity> result = daoFactory.getTipoRevisionDAO().read(entity);
+		List<TipoRevisionEntity> resultEntityList = daoFactory.getTipoRevisionDAO().read(entity);
 
-		return null;
+		return TipoRevisionAssembler.getInstance().toDomainListFromEntityList(resultEntityList);
 	}
 
 }

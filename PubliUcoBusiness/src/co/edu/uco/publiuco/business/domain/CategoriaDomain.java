@@ -7,7 +7,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
 
-public class CategoriaDomain {
+public final class CategoriaDomain {
 	
 	private static final CategoriaDomain DEFAULT_OBJECT = new CategoriaDomain();
 	private UUID identificador;

@@ -42,10 +42,16 @@ public class EstadoAdministradorCategoriaAssembler implements
 	}
 
 	@Override
-	public List<EstadoAdministradorCategoriaDomain> toDomainListFromEntity(
+	public List<EstadoAdministradorCategoriaDomain> toDomainListFromEntityList(
 			List<EstadoAdministradorCategoriaEntity> entityList) {
-		// TODO Auto-generated method stub
-		return null;
+
+		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
+	}
+
+	@Override
+	public List<EstadoAdministradorCategoriaDTO> toDTOListFromDomainList(
+			List<EstadoAdministradorCategoriaDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
 	}
 
 }

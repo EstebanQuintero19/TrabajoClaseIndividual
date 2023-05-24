@@ -6,7 +6,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class RevisorDTO {
+public final class RevisorDTO {
 	
 	private UUID identificador;
 	private TipoIdentificacionDTO tipoIdentificacion;

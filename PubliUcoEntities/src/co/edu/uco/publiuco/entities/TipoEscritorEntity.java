@@ -6,7 +6,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class TipoEscritorEntity {
+public final class TipoEscritorEntity {
 	
 	private static final TipoEscritorEntity DEFAULT_OBJECT = new TipoEscritorEntity();
 	private UUID identificador;
@@ -23,7 +23,8 @@ public class TipoEscritorEntity {
 	}
 	
 	
-	public TipoEscritorEntity(UUID identificador, String nombre, String descripcion, EstadoTipoEscritorEntity estado) {
+	public TipoEscritorEntity(UUID identificador, String nombre, String descripcion,
+			EstadoTipoEscritorEntity estado) {
 		super();
 		setIdentificador(identificador);
 		setNombre(nombre);
@@ -34,7 +35,7 @@ public class TipoEscritorEntity {
 	public static TipoEscritorEntity getDefaultObject() {
 		return DEFAULT_OBJECT;
 	}
-	
+	//Setter y Getter
 	public final UUID getIdentificador() {
 		return identificador;
 	}

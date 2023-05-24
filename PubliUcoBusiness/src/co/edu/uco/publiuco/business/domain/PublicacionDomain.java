@@ -7,7 +7,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilDate;
 import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class PublicacionDomain {
+public final class PublicacionDomain {
 
 	private static final PublicacionDomain DEFAULT_OBJECT = new PublicacionDomain();
 	private UUID identificador;

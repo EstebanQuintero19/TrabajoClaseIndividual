@@ -55,9 +55,14 @@ public class PublicacionAssembler implements Assembler<PublicacionDomain, Public
 	}
 
 	@Override
-	public List<PublicacionDomain> toDomainListFromEntity(List<PublicacionEntity> entityList) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<PublicacionDomain> toDomainListFromEntityList(List<PublicacionEntity> entityList) {
+
+		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
+	}
+
+	@Override
+	public List<PublicacionDTO> toDTOListFromDomainList(List<PublicacionDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
 	}
 
 }

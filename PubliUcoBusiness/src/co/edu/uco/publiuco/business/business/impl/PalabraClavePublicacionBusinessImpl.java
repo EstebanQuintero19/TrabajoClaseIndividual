@@ -29,9 +29,9 @@ public class PalabraClavePublicacionBusinessImpl implements PalabraClavePublicac
 		final PalabraClavePublicacionEntity entity = PalabraClavePublicacionAssembler.getInstance()
 				.toEntityFromDomain(domain);
 
-		final List<PalabraClavePublicacionEntity> result = daoFactory.getPalabraClavePublicacionDAO().read(entity);
+		List<PalabraClavePublicacionEntity> resultEntityList = daoFactory.getPalabraClavePublicacionDAO().read(entity);
 
-		return null;
+		return PalabraClavePublicacionAssembler.getInstance().toDomainListFromEntityList(resultEntityList);
 	}
 
 	@Override

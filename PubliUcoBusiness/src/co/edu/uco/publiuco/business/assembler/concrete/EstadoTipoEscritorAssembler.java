@@ -42,9 +42,14 @@ public class EstadoTipoEscritorAssembler
 	}
 
 	@Override
-	public List<EstadoTipoEscritorDomain> toDomainListFromEntity(List<EstadoTipoEscritorEntity> entityList) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<EstadoTipoEscritorDomain> toDomainListFromEntityList(List<EstadoTipoEscritorEntity> entityList) {
+
+		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
+	}
+
+	@Override
+	public List<EstadoTipoEscritorDTO> toDTOListFromDomainList(List<EstadoTipoEscritorDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
 	}
 
 }
