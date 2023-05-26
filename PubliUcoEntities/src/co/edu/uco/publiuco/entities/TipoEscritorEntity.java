@@ -35,7 +35,7 @@ public final class TipoEscritorEntity {
 	public static TipoEscritorEntity getDefaultObject() {
 		return DEFAULT_OBJECT;
 	}
-	//Setter y Getter
+	
 	public final UUID getIdentificador() {
 		return identificador;
 	}

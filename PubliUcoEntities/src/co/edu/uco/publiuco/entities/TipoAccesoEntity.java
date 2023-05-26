@@ -35,7 +35,7 @@ public final class TipoAccesoEntity {
 		return DEFAULT_OBJECT;
 	}
 
-	// Setter y Getter
+
 	public final UUID getIdentificador() {
 		return identificador;
 	}
