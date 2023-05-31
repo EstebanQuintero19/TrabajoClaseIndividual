@@ -4,28 +4,28 @@ import java.util.UUID;
 import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public final class SuscripcionPublicacionDomain {
+public final class SuscripcionPublicacionDomian {
 
-	private static final SuscripcionPublicacionDomain DEFAULT_OBJECT = new SuscripcionPublicacionDomain();
+	private static final SuscripcionPublicacionDomian DEFAULT_OBJECT = new SuscripcionPublicacionDomian();
 	private UUID identificador;
 	private PerfilDomain perfil;
 	private PlanPublicacionDomain planPublicacion;
 
-	private SuscripcionPublicacionDomain() {
+	private SuscripcionPublicacionDomian() {
 		super();
 		setIdentificador(UtilUUID.DEFAULT_UUID);
 		setPerfil(PerfilDomain.getDefaultObject());
 		setPlanPublicacion(PlanPublicacionDomain.getDefaultObject());
 	}
 
-	public SuscripcionPublicacionDomain(UUID identificador, PerfilDomain perfil, PlanPublicacionDomain publicacion) {
+	public SuscripcionPublicacionDomian(UUID identificador, PerfilDomain perfil, PlanPublicacionDomain publicacion) {
 		super();
 		setIdentificador(identificador);
 		setPerfil(perfil);
 		setPlanPublicacion(planPublicacion);
 	}
 
-	public static SuscripcionPublicacionDomain getDefaultObject() {
+	public static SuscripcionPublicacionDomian getDefaultObject() {
 		return DEFAULT_OBJECT;
 	}
 

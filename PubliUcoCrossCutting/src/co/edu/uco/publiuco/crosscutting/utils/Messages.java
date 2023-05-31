@@ -707,7 +707,7 @@ public final class Messages {
 		public static final String REGISTER_NEW_SUCESS = "El nuevo estado de tipo de acceso se ha regitrado de forma satisfactoria";
 
 	}
-	
+
 	public static final class EstadoTipoIdentificacionControllerMessages {
 
 		private EstadoTipoIdentificacionControllerMessages() {
@@ -791,7 +791,7 @@ public final class Messages {
 		public static final String DESCRIPCION_IS_DEFAULT = "No es posible tener la descripcion por defecto del estado tipo acceso";
 
 	}
-	
+
 	public static final class EstadoTipoIdentificacionValidationMessages {
 
 		private EstadoTipoIdentificacionValidationMessages() {
@@ -806,7 +806,7 @@ public final class Messages {
 		public static final String DESCRIPCION_IS_DEFAULT = "No es posible tener la descripcion por defecto del estado tipo identificacion";
 
 	}
-	
+
 	public static final class LectorValidationMessages {
 
 		private LectorValidationMessages() {
@@ -815,12 +815,180 @@ public final class Messages {
 		public static final String GENERAL = "No es posible registrar un nuevo lector con los datos ingresados";
 		public static final String IDENTIFICADOR_IS_NULL = "No es posible continuar con el identificador del lector vacio";
 		public static final String IDENTIFICADOR_IS_DEFAULT = "No es posible tener el identificador por defecto del lector";
-		public static final String NOMBRE_IS_NULL = "No es posible continuar con el nombre del lector vacio";
-		public static final String NOMBRE_IS_DEFAULT = "No es posible tener el nombre por defecto del lector";
-		public static final String DESCRIPCION_IS_NULL = "No es posible continuar con la descrpcion del lector vacio";
-		public static final String DESCRIPCION_IS_DEFAULT = "No es posible tener la descripcion por defecto del lector";
+		public static final String PRIMER_NOMBRE_IS_NULL = "No es posible continuar con el primer nombre del lector vacio";
+		public static final String PRIMER_NOMBRE_IS_DEFAULT = "No es posible tener el primer nombre por defecto del lector";
+		public static final String SEGUNDO_NOMBRE_IS_NULL = "No es posible continuar con el segundo nombre del lector vacio";
+		public static final String SEGUNDO_NOMBRE_IS_DEFAULT = "No es posible tener el segundo nombre por defecto del lector";
+		public static final String PRIMER_APELLIDO_IS_NULL = "No es posible continuar con el primer apellido del lector vacio";
+		public static final String PRIMER_APELLIDO_IS_DEFAULT = "No es posible tener el primer apellido por defecto del lector";
+		public static final String SEGUNDO_APELLIDO_IS_NULL = "No es posible continuar con el segundo apellido del lector vacio";
+		public static final String SEGUNDO_APELLIDO_IS_DEFAULT = "No es posible tener el segundo apellido por defecto del lector";
+		public static final String NUMERO_IDENTIFICACION_IS_NULL = "No es posible continuar con el numero de identificacion del lector vacio";
+		public static final String NUMERO_IDENTIFICACION_IS_DEFAULT = "No es posible tener el numero de identificacion por defecto del lector";
+		public static final String CORREO_IS_NULL = "No es posible continuar con el correo del lector vacio";
+		public static final String CORREO_IS_DEFAULT = "No es posible tener el correo por defecto del lector";
+		public static final String INDICADOR_PAIS_IS_NULL = "No es posible continuar con el indicador del pais del lector vacio";
+		public static final String INDICADOR_PAIS_IS_DEFAULT = "No es posible tener el indicador del pais por defecto del lector";
+		public static final String NUMERO_TELEFONO_IS_NULL = "No es posible continuar con el numero de telefono del lector vacio";
+		public static final String NUMERO_TELEFONO_IS_DEFAULT = "No es posible tener el numero de telefono< por defecto del lector";
 
 	}
-	
+
+	public static final class PublicacionValidationMessages {
+
+		private PublicacionValidationMessages() {
+		}
+
+		public static final String GENERAL = "No es posible registrar una nueva publicacion con los datos ingresados";
+		public static final String IDENTIFICADOR_IS_NULL = "No es posible continuar con el identificador de la publicacion vacio";
+		public static final String IDENTIFICADOR_IS_DEFAULT = "No es posible tener el identificador por defecto de la publicacion";
+
+	}
+
+	public static final class CategoriaValidationMessages {
+
+		private CategoriaValidationMessages() {
+		}
+
+		public static final String GENERAL = "No es posible registrar una nueva categoria con los datos ingresados";
+		public static final String IDENTIFICADOR_IS_NULL = "No es posible continuar con el identificador de la categoria vacio";
+		public static final String IDENTIFICADOR_IS_DEFAULT = "No es posible tener el identificador por defecto de la categoria";
+		public static final String NOMBRE_IS_NULL = "No es posible continuar con el nombre de la categoria vacio";
+		public static final String NOMBRE_IS_DEFAULT = "No es posible tener el nombre por defecto de la categoria";
+		public static final String DESCRIPCION_IS_NULL = "No es posible continuar con la descrpcion de la categoria vacio";
+		public static final String DESCRIPCION_IS_DEFAULT = "No es posible tener la descripcion por defecto de la categoria";
+
+	}
+
+	public static final class ComentarioLectorValidationMessages {
+
+		private ComentarioLectorValidationMessages() {
+		}
+
+		public static final String GENERAL = "No es posible registrar un nuevo comentario del lector con los datos ingresados";
+		public static final String IDENTIFICADOR_IS_NULL = "No es posible continuar con el identificador del comentario del lector vacio";
+		public static final String IDENTIFICADOR_IS_DEFAULT = "No es posible tener el identificador por defecto del comentario del lector";
+		public static final String COMENTARIO_IS_NULL = "No es posible continuar con el comentario del comentario del lector vacio";
+		public static final String COMENTARIO_IS_DEFAULT = "No es posible tener el comentario por defecto del comentario del lector";
+		public static final String FECHA_CALIFICACION_IS_NULL = "No es posible continuar con la fecha de calificacion del comentario del lector vacio";
+		public static final String FECHA_CALIFICACION_IS_DEFAULT = "No es posible tener la fecha de la calificacion por defecto del comentario del lector";
+
+	}
+
+	public static final class RespuestaValidationMessages {
+
+		private RespuestaValidationMessages() {
+		}
+
+		public static final String GENERAL = "No es posible registrar una nueva respuesta con los datos ingresados";
+		public static final String IDENTIFICADOR_IS_NULL = "No es posible continuar con el identificador de la respuesta vacio";
+		public static final String IDENTIFICADOR_IS_DEFAULT = "No es posible tener el identificador por defecto de la respuesta";
+		public static final String NOMBRE_IS_NULL = "No es posible continuar con el nombre de la respuesta vacio";
+		public static final String NOMBRE_IS_DEFAULT = "No es posible tener el nombre por defecto de la respuesta";
+		public static final String DESCRIPCION_IS_NULL = "No es posible continuar con la descrpcion de la respuesta vacio";
+		public static final String DESCRIPCION_IS_DEFAULT = "No es posible tener la descripcion por defecto de la respuesta";
+
+	}
+
+	public static final class TipoAccesoValidationMessages {
+
+		private TipoAccesoValidationMessages() {
+		}
+
+		public static final String GENERAL = "No es posible registrar un nuevo tipo de acceso con los datos ingresados";
+		public static final String IDENTIFICADOR_IS_NULL = "No es posible continuar con el identificador del tipo acceso vacio";
+		public static final String IDENTIFICADOR_IS_DEFAULT = "No es posible tener el identificador por defecto del tipo acceso";
+		public static final String NOMBRE_IS_NULL = "No es posible continuar con el nombre del tipo acceso vacio";
+		public static final String NOMBRE_IS_DEFAULT = "No es posible tener el nombre por defecto del tipo acceso";
+		public static final String DESCRIPCION_IS_NULL = "No es posible continuar con la descrpcion del tipo acceso vacio";
+		public static final String DESCRIPCION_IS_DEFAULT = "No es posible tener la descripcion por defecto del tipo acceso";
+
+	}
+
+	public static final class TipoIdentificacionValidationMessages {
+
+		private TipoIdentificacionValidationMessages() {
+		}
+
+		public static final String GENERAL = "No es posible registrar un nuevo tipo de identificacion con los datos ingresados";
+		public static final String IDENTIFICADOR_IS_NULL = "No es posible continuar con el identificador del tipo de identificacion vacio";
+		public static final String IDENTIFICADOR_IS_DEFAULT = "No es posible tener el identificador por defecto del tipo de identificacion";
+		public static final String NOMBRE_IS_NULL = "No es posible continuar con el nombre del tipo de identificacion vacio";
+		public static final String NOMBRE_IS_DEFAULT = "No es posible tener el nombre por defecto del tipo de identificacion";
+		public static final String DESCRIPCION_IS_NULL = "No es posible continuar con la descrpcion del tipo de identificacion vacio";
+		public static final String DESCRIPCION_IS_DEFAULT = "No es posible tener la descripcion por defecto del tipo de identificacion";
+
+	}
+
+	public static final class TipoRelacionInstitucionValidationMessages {
+
+		private TipoRelacionInstitucionValidationMessages() {
+		}
+
+		public static final String GENERAL = "No es posible registrar un nuevo tipo de relacion de institucion con los datos ingresados";
+		public static final String IDENTIFICADOR_IS_NULL = "No es posible continuar con el identificador del tipo de relacion de institucion vacio";
+		public static final String IDENTIFICADOR_IS_DEFAULT = "No es posible tener el identificador por defecto del tipo de relacion de institucion";
+		public static final String NOMBRE_IS_NULL = "No es posible continuar con el nombre del tipo de relacion de institucion vacio";
+		public static final String NOMBRE_IS_DEFAULT = "No es posible tener el nombre por defecto del tipo de relacion de institucion";
+		public static final String DESCRIPCION_IS_NULL = "No es posible continuar con la descrpcion del tipo de relacion de institucion vacio";
+		public static final String DESCRIPCION_IS_DEFAULT = "No es posible tener la descripcion por defecto del tipo de relacion de institucion";
+
+	}
+
+	public static final class EstadoTipoRelacionInstitucionSqlServerDAOMessages {
+
+		private EstadoTipoRelacionInstitucionSqlServerDAOMessages() {
+		}
+
+		public static final String CREATE_SQL_EXCEPTION_USER_MESSAGE = "Se ha presentado un problema tratando de registrar la informacion del nuevo estado de tipo relacion institucion";
+		public static final String CREATE_SQL_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema de tipo SQLException dentro del metodo create de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+		public static final String CREATE_EXCEPTION_USER_MESSAGE = "Se ha presentado un problema inesperado tratando de registrar la informacion del nuevo estado de tipo relacion institucion";
+		public static final String CREATE_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema inesperadp dentro del metodo create de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+		public static final String READ_SQL_EXCEPTION_USER_MESSAGE = "Se ha presentado un problema tratando de consultar la informacion del estado de tipo relacion institucion";
+		public static final String READ_SQL_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema de tipo SQLException dentro del metodo read de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+		public static final String READ_EXCEPTION_USER_MESSAGE = "Se ha presentado un problema inesperado tratando de consultar la informacion del nuevo estado de tipo relacion institucion";
+		public static final String READ_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema inesperadp dentro del metodo executeQuery de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+		public static final String SET_PARAMETERS_SQL_EXCEPTION_USER_MESSAGE = "Se ha presentado un problema tratando de consultar la informacion del estado de tipo relacion institucion";
+		public static final String SET_PARAMETERS_SQL_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema de tipo SQLException dentro del metodo read de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+		public static final String SET_PARAMETERS_EXCEPTION_USER_MESSAGE = "Se ha presentado un problema inesperado tratando de consultar la informacion del nuevo estado de tipo relacion institucion";
+		public static final String SET_PARAMETERS_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema inesperadp dentro del metodo read de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+		public static final String EXECUTE_QUERY_SQL_EXCEPTION_USER_MESSAGE = "Se ha presentado un problema tratando de consultar la informacion del estado de tipo relacion institucion";
+		public static final String EXECUTE_QUERY_SQL_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema de tipo SQLException dentro del metodo executeQuery de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+		public static final String EXECUTE_QUERY_EXCEPTION_USER_MESSAGE = "Se ha presentado un problema inesperado tratando de consultar la informacion del nuevo estado de tipo relacion institucion";
+		public static final String EXECUTE_QUERY_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema inesperadp dentro del metodo executeQuery de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+
+	}
+
+	public static final class TipoRelacionInstitucionSqlServerDAOMessages {
+
+		private TipoRelacionInstitucionSqlServerDAOMessages() {
+		}
+
+		public static final String CREATE_SQL_EXCEPTION_USER_MESSAGE = "Se ha presentado un problema tratando de registrar la informacion del nuevo tipo relacion institucion";
+		public static final String CREATE_SQL_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema de tipo SQLException dentro del metodo create de la clase TipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+		public static final String CREATE_EXCEPTION_USER_MESSAGE = "Se ha presentado un problema inesperado tratando de registrar la informacion del nuevo tipo relacion institucion";
+		public static final String CREATE_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema inesperadp dentro del metodo create de la clase TipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+		public static final String READ_SQL_EXCEPTION_USER_MESSAGE = "Se ha presentado un problema tratando de consultar la informacion del tipo relacion institucion";
+		public static final String READ_SQL_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema de tipo SQLException dentro del metodo read de la clase TipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+		public static final String READ_EXCEPTION_USER_MESSAGE = "Se ha presentado un problema inesperado tratando de consultar la informacion del nuevo tipo relacion institucion";
+		public static final String READ_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema inesperadp dentro del metodo executeQuery de la clase TipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+		public static final String UPDATE_SQL_EXCEPTION_USER_MESSAGE = "Se ha presentado un problema tratando de actualizar la informacion del tipo relacion institucion";
+		public static final String UPDATE_SQL_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema de tipo SQLException dentro del metodo update de la clase TipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+		public static final String UPDATE_EXCEPTION_USER_MESSAGE = "Se ha presentado un problema inesperado tratando de actualizar la informacion del nuevo tipo relacion institucion";
+		public static final String UPDATE_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema inesperado dentro del metodo actualizar de la clase TipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+		public static final String DELETE_SQL_EXCEPTION_USER_MESSAGE = "Se ha presentado un problema tratando de eliminar la informacion del tipo relacion institucion";
+		public static final String DELETE_SQL_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema de tipo SQLException dentro del metodo delete de la clase TipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+		public static final String DELETE_EXCEPTION_USER_MESSAGE = "Se ha presentado un problema inesperado tratando de eliminar la informacion del nuevo tipo relacion institucion";
+		public static final String DELETE_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema inesperado dentro del metodo delete de la clase TipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+		public static final String SET_PARAMETERS_SQL_EXCEPTION_USER_MESSAGE = "Se ha presentado un problema tratando de consultar la informacion del tipo relacion institucion";
+		public static final String SET_PARAMETERS_SQL_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema de tipo SQLException dentro del metodo read de la clase TipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+		public static final String SET_PARAMETERS_EXCEPTION_USER_MESSAGE = "Se ha presentado un problema inesperado tratando de consultar la informacion del nuevo tipo relacion institucion";
+		public static final String SET_PARAMETERS_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema inesperadp dentro del metodo read de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+		public static final String EXECUTE_QUERY_SQL_EXCEPTION_USER_MESSAGE = "Se ha presentado un problema tratando de consultar la informacion del estado de tipo relacion institucion";
+		public static final String EXECUTE_QUERY_SQL_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema de tipo SQLException dentro del metodo executeQuery de la clase TipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+		public static final String EXECUTE_QUERY_EXCEPTION_USER_MESSAGE = "Se ha presentado un problema inesperado tratando de consultar la informacion del nuevo tipo relacion institucion";
+		public static final String EXECUTE_QUERY_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema inesperadp dentro del metodo executeQuery de la clase TipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+
+	}
 
 }

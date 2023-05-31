@@ -115,6 +115,7 @@ public final class SqlServerDAOFactory extends DAOFactory {
 
 	@Override
 	protected final void openConection() {
+		//
 	}
 
 	@Override
